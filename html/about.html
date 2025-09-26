@@ -6,57 +6,365 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أُسْرَة</title>
     <!-- Bootstrap RTL -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://db.onlinewebfonts.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
     <!-- Custom CSS -->
-    <link rel="preload" href="../scss/master.css" as="style">
-    <link rel="stylesheet" href="../scss/master.css">
+    <link rel="preload" href="../scss/about.scss" as="style">
+    <link rel="stylesheet" href="../scss/about.css">
     <!-- Fonts -->
     <link href="https://db.onlinewebfonts.com/c/055514b82245a8345db0e2f933217a7f?family=Somar+Rounded" rel="stylesheet">
     <!-- Icons Website -->
-    <link rel="icon" type="image/png" sizes="100x100" href="../imges/Group 28.png">
+    <link rel="icon" type="image/png" sizes="100x100" href="imges/Group 28.png">
     <!-- Icons Apple -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../imges/Group 28.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imges/Group 28.png">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </noscript>
+    <!-- Preload Hero (LCP) Image -->
+    <link rel="preload" as="image" href="imges/679494a18f61b1c17b73a8bb03c121f3858e9e59.png"
+        imagesrcset="imges/679494a18f61b1c17b73a8bb03c121f3858e9e59.png 735w" imagesizes="(min-width: 992px) 735px, 90vw">
 </head>
 
 <body>
     <!-- Start Header -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../imges/Logo.png" alt="شعار أُسرة" width="241" height="103">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="تبديل القائمة">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">الرئيسية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">عن أُسرة</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">الخبراء</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">مكتبة أُسرة</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">أتصل بنا</a>
-                    </li>
-                </ul>
-
-
-                <button class="btn join-us">أنضم الآن</button>
-            </div>
-        </div>
-    </nav>
-    <!-- End Header -->
+    <header class="overflow-hidden">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../imges/Logo.png" alt="شعار أُسرة" width="241" height="103">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="تبديل القائمة">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">عن أُسرة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">الخبراء</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">مكتبة أُسرة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">أراء العملاء</a>
+                            </li>
+                            </ul>
+                    <button class="btn join-us">أتصل بنا</button>
+                    </div>
+                    </div>
+                    </nav>
+                    <div class="content-header">
+                        <div class="container d-flex justify-content-evenly align-items-center">
+                            <div class="img">
+                                <img src="../imges/header Image.png" alt="شعار اسرة">
+                            </div>
+                            <div class="text-center">
+                                <h2 class="text-white mb-1 fs-1 mb-2">عن أُســــــــرة</h2>
+                                <p class="text-white fs-6 mt-2">لمحة عامة عن أُسرة، رؤيتها، رسالتها، وقيمها الأساسية.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </header>
+                    <!-- End Header -->
+                    <!-- Start Main -->
+                    <!-- Start Who Are We  -->
+                    <section class="who-are py-5">
+                        <div class="main-head text-center mb-5">
+                            <h1 class="mb-2"> من نحن</h1>
+                            <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
+                        </div>
+                        <div class="content">
+                            <div class="container">
+                                <div class="img text-center">
+                                    <img src="../imges/who Are.jpg" alt="من نحن">
+                                </div>
+                                <div class="text mt-3">
+                                    <p>هي منصة رائدة تهدف إلى تمكين الأفراد من تحقيق أقصى إمكاناتهم من خلال ربطهم بنخبة من الخبراء والكوتش
+                                        والاستشاريين
+                                        المعتمدين. نؤمن بأن كل شخص يستحق الدعم والإرشاد اللازمين للتغلب على تحديات الحياة، وتطوير الذات،
+                                        وبناء مستقبل مزدهر.
+                                        تأسست أُسرة على مبدأ توفير بيئة آمنة وداعمة، حيث يمكن للمستخدمين الوصول إلى موارد قيمة وجلسات مخصصة
+                                        تساعدهم على النمو
+                                        الشخصي والمهني</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Who Are We  -->
+                    <!-- Start Info Section -->
+                    <section class="info py-5">
+                        <div class="container">
+                            <div class="main-head">
+                                <div class="main-text text-center">
+                                    <h1 class="mb-2"> الرؤية </h1>
+                                    <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
+                                </div>
+                                <div class="content d-flex justify-content-center align-items-center">
+                                    <div class="img">
+                                        <img src="../imges/3bng.png" alt="3bng">
+                                    </div>
+                                    <div class="text">
+                                        <p>هي منصة رائدة تهدف إلى تمكين الأفراد من تحقيق أقصى إمكاناتهم من خلال ربطهم بنخبة من الخبراء
+                                            والكوتش والاستشاريين
+                                            المعتمدين. نؤمن بأن كل شخص يستحق الدعم والإرشاد اللازمين للتغلب على تحديات الحياة، وتطوير الذات،
+                                            وبناء مستقبل مزدهر.
+                                            تأسست أُسرة على مبدأ توفير بيئة آمنة وداعمة، حيث يمكن للمستخدمين الوصول إلى موارد قيمة وجلسات
+                                            مخصصة تساعدهم على النمو
+                                            الشخصي والمهني</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-head">
+                                <div class="main-text text-center">
+                                    <h1 class="mb-2"> المهمة </h1>
+                                    <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
+                                </div>
+                                <div class="content d-flex justify-content-center align-items-center">
+                                    <div class="text">
+                                        <p>هي منصة رائدة تهدف إلى تمكين الأفراد من تحقيق أقصى إمكاناتهم من خلال ربطهم بنخبة من الخبراء
+                                            والكوتش والاستشاريين
+                                            المعتمدين. نؤمن بأن كل شخص يستحق الدعم والإرشاد اللازمين للتغلب على تحديات الحياة، وتطوير الذات،
+                                            وبناء مستقبل مزدهر.
+                                            تأسست أُسرة على مبدأ توفير بيئة آمنة وداعمة، حيث يمكن للمستخدمين الوصول إلى موارد قيمة وجلسات
+                                            مخصصة تساعدهم على النمو
+                                            الشخصي والمهني</p>
+                                    </div>
+                                    <div class="img">
+                                        <img src="../imges/2bng.png" alt="2bng">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-head">
+                                <div class="main-text text-center">
+                                    <h1 class="mb-2"> القيم </h1>
+                                    <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
+                                </div>
+                                <div class="content d-flex justify-content-center align-items-center">
+                                    <div class="img">
+                                        <img src="../imges/1bng.png" alt="1bng">
+                                    </div>
+                                    <div class="text">
+                                        <p>هي منصة رائدة تهدف إلى تمكين الأفراد من تحقيق أقصى إمكاناتهم من خلال ربطهم بنخبة من الخبراء
+                                            والكوتش والاستشاريين
+                                            المعتمدين. نؤمن بأن كل شخص يستحق الدعم والإرشاد اللازمين للتغلب على تحديات الحياة، وتطوير الذات،
+                                            وبناء مستقبل مزدهر.
+                                            تأسست أُسرة على مبدأ توفير بيئة آمنة وداعمة، حيث يمكن للمستخدمين الوصول إلى موارد قيمة وجلسات
+                                            مخصصة تساعدهم على النمو
+                                            الشخصي والمهني</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Info Section -->
+                    <!-- Start Cotshaing -->
+                    <section class="cotshaing py-5">
+                        <div class="container">
+                            <div class="content d-flex justify-content-between align-items-center">
+                                <div class="img mb-5">
+                                    <img src="../imges/Cotshaing.png" alt="صورة الخبراء" loading="lazy" decoding="async">
+                                </div>
+                                <div class="text mb-5">
+                                    <h1 class="mb-3">تعرف على خبرائنا</h1>
+                                    <p class="mt-3 mb-3">نقدم لك نخبة من الكوتش والاستشاريين المعتمدين، كل منهم متخصص في مجاله،
+                                        ومستعد لتقديم الدعم </p>
+                                    <button type="button" class="btn btn-hero-two bg-white" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                        أحجز جلسة
+                                    </button>
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">حجز جلسة</h1>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h5>"عذرًا، لا توجد مواعيد متاحة في الوقت الحالي."</h5>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Cotshaing -->
+                    <!-- Start Qusation -->
+                    <section class="qusation py-5">
+                        <div class="container">
+                            <div class="main-head text-center mb-5">
+                                <h1 class="mb-2">الأسئلة الشائعة</h1>
+                                <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
+                            </div>
+                    
+                            <div class="accordion" id="accordionExample">
+                    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                            كيف يمكنني حجز جلسة مع خبير؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>يمكنك تصفح قائمة الخبراء، اختيار الخبير المناسب لك، ثم الضغط على زر "احجز الآن"
+                                                لتحديد الموعد والدفع.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                            هل الجلسات سرية؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>خصوصيتك وأمان معلوماتك هما أولويتنا القصوى. جميع الجلسات والمعلومات التي تشاركها مع
+                                                الخبراء سرية تمامًا ومحمية بموجب سياسة الخصوصية الصارمة لدينا ومعايير الأمان
+                                                العالمية.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                            كيف يتم اختيار الخبراء في أُسرة؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>يتم اختيار خبرائنا بعناية فائقة من خلال عملية تقييم شاملة تتضمن التحقق من المؤهلات
+                                                الأكاديمية، الخبرات العملية، الاعتمادات المهنية من الجهات الموثوقة، والمقابلات
+                                                الشخصية، لضمان تقديم أعلى مستويات الجودة والكفاءة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFour1" aria-expanded="true" aria-controls="collapseFour1">
+                                            هل يمكنني تغيير موعد الجلسة أو إلغائها؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>يمكنك تغيير أو إلغاء موعد الجلسة وفقًا لسياسة الإلغاء والتعديل الموضحة في شروط الخدمة
+                                                الخاصة بنا. يرجى مراجعة الشروط لمعرفة التفاصيل المتعلقة بالمهل الزمنية والإجراءات.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive1" aria-expanded="false" aria-controls="collapseFive1">
+                                            هل يمكنني الاستفادة من أُسرة إذا كنت خارج مصر؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>معظم خدماتنا متاحة عبر الإنترنت، مما يتيح لك الوصول إلى خبرائنا من أي مكان في العالم.
+                                                نحن نسعى لتقديم الدعم لأكبر عدد ممكن من الأفراد بغض النظر عن موقعهم الجغرافي.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSix1" aria-expanded="false" aria-controls="collapseSix1">
+                                            ما هو الفرق بين الكوتشنج والاستشارة والعلاج النفسي؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSix1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>الكوتشنج يركز على تحقيق الأهداف المستقبلية وتطوير الإمكانات. الاستشارة تقدم إرشادات
+                                                وحلول لمشكلات محددة. العلاج النفسي يتعامل مع القضايا العميقة والصحة النفسية. يمكن
+                                                لخبرائنا مساعدتك في تحديد الأنسب لك.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven1" aria-expanded="false" aria-controls="collapseSeven1">
+                                        كيف يمكنني التواصل مع دعم العملاء
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>يمكنك التواصل مع فريق دعم العملاء لدينا عبر [اذكر طرق التواصل: مثل البريد الإلكتروني،
+                                            رقم الهاتف، أو الدردشة المباشرة] المتاحة في صفحة "اتصل بنا". نحن هنا لمساعدتك في أي
+                                            وقت.</p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                        </div>
+                        </section>
+                        <!-- End Qusation -->
+                        <!-- Start Footer -->
+                        <footer class="footer py-5">
+                            <div class="container">
+                                <div class="content d-flex justify-content-evenly align-items-center">
+                                    <div class="img">
+                                        <img src="../imges/Logo-Footer.png" alt="شعار أُسرة في التذييل" width="241" height="103" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <div class="text">
+                                        <div class="uls d-flex gap-5">
+                                            <ul class="unlisted">
+                                                <li><a href="#">روابط مختصرة</a></li>
+                                                <li><a href="#">الرئيسية</a></li>
+                                                <li><a href="#">عن أُسرة</a></li>
+                                                <li><a href="#">الخبراء</a></li>
+                                                <li><a href="#">مكتبة أُسرة</a></li>
+                                                <li><a href="#">أتصل بنا</a></li>
+                                            </ul>
+                                            <ul class="unlisted">
+                                                <li><a href="#">الدعم</a></li>
+                                                <li><a href="#">سياسة الاسترجاع</a></li>
+                                                <li><a href="#">الشروط والأحكام</a></li>
+                                                <li><a href="#">اتصل بنا</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </footer>
+                    <!-- End Footer -->
+                    <!-- End Main -->
+                    <!-- Bootstrap Bundle -->
+                    <link rel="preload" as="script" href="../dist/bootstrap.bundle.js">
+                    <script src="../dist/bootstrap.bundle.js" defer></script>
 </body>
 
 </html>

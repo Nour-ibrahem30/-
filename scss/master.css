@@ -67,6 +67,7 @@ button.btn-hero-two:hover {
 }
 .navbar a {
   color: white !important;
+  margin-right: 15px;
 }
 .navbar .join-us {
   width: 177px;
