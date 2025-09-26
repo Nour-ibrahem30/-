@@ -222,8 +222,8 @@ header .navbar .join-us:hover {
     width: 100%;
   }
   .navbar img {
-    width: 180px;
-    height: auto;
+    width: 180px !important;
+    height: auto !important;
   }
   .content .img-content {
     gap: 1rem !important;
