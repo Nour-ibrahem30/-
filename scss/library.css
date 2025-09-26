@@ -1,0 +1,364 @@
+/* Start Global */
+:root {
+  --main-color: #008695;
+  --main-transition: 0.3s;
+}
+
+body {
+  font-family: "Somar Rounded", sans-serif;
+}
+
+/* Ensure images scale within their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::-moz-selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.main-head h1 {
+  color: var(--main-color);
+}
+
+button {
+  width: 208px;
+  height: 56px;
+  margin-left: 15px;
+}
+button.btn-hero-one {
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  color: white;
+  transition: var(--main-transition);
+}
+button.btn-hero-one:hover {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+button.btn-hero-two {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+button.btn-hero-two:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* End Global*/
+/* Start Header*/
+header {
+  background-color: var(--main-color);
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+header .content-header .img {
+  position: relative;
+  height: 285px;
+}
+header .content-header .img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  opacity: 0.7;
+}
+header .content-header img {
+  width: 309px;
+}
+header .navbar {
+  background-color: var(--main-color) !important;
+  height: auto;
+}
+header .navbar img {
+  width: 241px;
+  height: 103px;
+}
+header .navbar a {
+  color: white !important;
+  margin-right: 15px;
+}
+header .navbar .join-us {
+  width: 177px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  transition: var(--main-transition);
+}
+header .navbar .join-us:hover {
+  color: var(--main-color);
+  background-color: white;
+}
+
+/* End Header*/
+/* Start Content*/
+.content .img-qoute {
+  background-color: var(--main-color);
+  padding: 15px;
+  border-radius: 16px;
+}
+.content .podcast-img .img {
+  width: 628px;
+  height: 349px;
+}
+.content .podcast-img .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* End Content*/
+/* Start Article */
+article .article-text .card {
+  width: 406px !important;
+  height: 483px !important;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  /* Keep the action button aligned to the bottom of the card */
+}
+article .article-text .card .card-img-top {
+  border-radius: 19px;
+  width: 100% !important;
+  height: auto !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+article .article-text .card h5 {
+  color: var(--main-color);
+}
+article .article-text .card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+article .article-text .card .card-body > p {
+  color: #6A6A6A;
+  font-size: 13px;
+}
+article .article-text .card .group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+article .article-text .card .group .img img {
+  width: 50px;
+  border-radius: 50%;
+}
+article .article-text .card .group .text span {
+  color: var(--main-color);
+  font-size: 13px;
+}
+article .article-text .card .group .text p {
+  font-size: 10px;
+  color: #6A6A6A;
+}
+article .article-text .card .modal-body span {
+  color: var(--main-color);
+}
+article .article-text .card .modal-body p {
+  font-size: 14px;
+}
+article .article-text .card .btn-hero-one {
+  margin-top: auto;
+}
+
+/* End Article */
+/* Start Footer Section*/
+.footer {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  margin-bottom: 15px;
+}
+.footer ul li a {
+  color: white !important;
+  text-decoration: none !important;
+}
+.footer ul li .uls {
+  flex-wrap: wrap;
+}
+
+/* Responsive utilities */
+@media (max-width: 991.98px) {
+  header .content-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero .content {
+    align-items: center;
+  }
+  .hero .container {
+    gap: 1.5rem;
+  }
+  .cotshaing .text,
+  .cotshaing .img {
+    width: 100%;
+  }
+  .navbar img {
+    width: 180px !important;
+    height: auto !important;
+  }
+  .content .img-content {
+    gap: 1rem !important;
+  }
+  .why-us .why-us-content {
+    gap: 2rem;
+  }
+  .footer .content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Podcasts: two per row on tablets */
+  .content .podcast-img {
+    gap: 1rem !important;
+  }
+  .content .podcast-img .img {
+    width: 48% !important;
+    height: auto !important;
+  }
+  .content .podcast-img .img img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* Articles: allow wrapping and two cards per row */
+  article .article-text .container {
+    flex-wrap: wrap;
+  }
+  article .article-text .card {
+    width: calc(50% - 1.5rem) !important;
+    height: auto !important;
+  }
+  article .article-text .card .card-img-top {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/10;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  /* Make grid columns full-width on small screens even if markup says col-6 */
+  .features .row > [class^=col-],
+  .features .row > [class*=" col-"],
+  .slider .row > [class^=col-],
+  .slider .row > [class*=" col-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .features .card {
+    max-width: 100%;
+  }
+  .slider .card {
+    max-width: 100%;
+  }
+  .hero .img {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  header {
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
+  .content-header img {
+    max-width: 380px;
+  }
+  .info .content .img img {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+  /* Podcasts: single column on small devices */
+  .content .podcast-img .img {
+    width: 100% !important;
+  }
+  /* Articles: single column cards */
+  article .article-text .card {
+    width: 100% !important;
+  }
+}
+@media (max-width: 575.98px) {
+  button {
+    width: 100%;
+    height: 48px;
+    margin-left: 0;
+  }
+  .features .card {
+    padding: 16px;
+  }
+  .footer .content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero .content h1 {
+    margin-bottom: 1rem;
+  }
+  .hero .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .content .img-content {
+    gap: 0.75rem !important;
+  }
+  .hero .img {
+    max-width: 320px;
+  }
+  .footer .img img {
+    width: 160px;
+    height: auto;
+  }
+  header {
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .content-header img {
+    max-width: 280px;
+  }
+  .who-are .content .text p,
+  .info p {
+    font-size: 18px;
+  }
+  .main-head img {
+    max-width: 140px;
+  }
+  /* Footer spacing on mobile */
+  .footer .text .uls {
+    gap: 1.25rem !important;
+    justify-content: center;
+  }
+  .footer .text .unlisted li {
+    margin-bottom: 10px;
+  }
+}
+/* Large screens (desktop and up) */
+@media (min-width: 992px) {
+  article .article-text .card .card-img-top {
+    height: 220px !important;
+  }
+}
+/* End Footer Section*//*# sourceMappingURL=library.css.map */
