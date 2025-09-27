@@ -117,7 +117,7 @@ class ExpertSystem {
                 <span>${expert.experience}</span>
             </div>
             <button class="btn btn-primary">احجز جلسة</button>
-            <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
+            <button class="btn btn-primary"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
         `;
         return card;
     }

@@ -80,20 +80,20 @@
         </div>
     </header>
     <!-- End Header -->
-        <!-- Start Main -->
-        <main>
-            <!-- Start Content -->
-            <section class="content py-5">
-                <div class="container">
-                    <div class="main-head text-center mb-5">
-                        <h1> الخبراء</h1>
-                        <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
-                    </div>
+    <!-- Start Main -->
+    <main>
+        <!-- Start Content -->
+        <section class="content py-5">
+            <div class="container">
+                <div class="main-head text-center mb-5">
+                    <h1> الخبراء</h1>
+                    <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
+                </div>
                 <div class="input mb-5">
                     <form action="#" method="post">
                         <input type="search" name="search" id="search" placeholder="ابحث حسب الأسم, و التخصص">
                     </form>
-                    </div>
+                </div>
                 <div class="filters mb-5">
                     <div class="select">
                         <select name="general-specialization" id="general-specialization">
@@ -151,14 +151,14 @@
                             </optgroup>
                         </select>
                     </div>
-                    </div>
+                </div>
                 <div class="experts-box d-flex justify-content-center align-items-center flex-wrap gap-3">
                     <!-- Expert cards will be loaded dynamically from JSON -->
-                    </div>
-                    </div>
+                </div>
+            </div>
         </section>
         <!-- End Content -->
-                 <!-- Start Footer -->
+        <!-- Start Footer -->
         <footer class="footer py-5">
             <div class="container">
                 <div class="content d-flex justify-content-evenly align-items-center">
@@ -182,31 +182,31 @@
                                 <li><a href="#">الشروط والأحكام</a></li>
                                 <li><a href="#">اتصل بنا</a></li>
                             </ul>
+                        </div>
                     </div>
-                    </div>
-                    </div>
-                    </div>
+                </div>
+            </div>
         </footer>
         <!-- End Footer -->
     </main>
     <!-- End Main -->
-    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JavaScript for Filtering -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Get all filter elements
             const searchInput = document.getElementById('search');
             const specializationFilter = document.getElementById('general-specialization');
             const experienceFilter = document.getElementById('experience');
             const detailedSpecializationFilter = document.getElementById('detailed-specialization');
             const genderFilter = document.getElementById('gender');
-            
+
             // Get all expert cards
             const expertCards = document.querySelectorAll('.expert');
-            
+
             // Function to filter experts
             function filterExperts() {
                 const searchTerm = searchInput.value.toLowerCase();
@@ -214,10 +214,10 @@
                 const selectedExperience = experienceFilter.value;
                 const selectedDetailedSpecialization = detailedSpecializationFilter.value;
                 const selectedGender = genderFilter.value;
-                
+
                 expertCards.forEach(card => {
                     let showCard = true;
-                    
+
                     // Search filter
                     if (searchTerm) {
                         const expertName = card.querySelector('h3').textContent.toLowerCase();
@@ -226,7 +226,7 @@
                             showCard = false;
                         }
                     }
-                    
+
                     // Specialization filter
                     if (selectedSpecialization && showCard) {
                         const cardSpecialization = card.getAttribute('data-specialization');
@@ -234,7 +234,7 @@
                             showCard = false;
                         }
                     }
-                    
+
                     // Experience filter
                     if (selectedExperience && showCard) {
                         const cardExperience = card.getAttribute('data-experience');
@@ -242,7 +242,7 @@
                             showCard = false;
                         }
                     }
-                    
+
                     // Detailed specialization filter
                     if (selectedDetailedSpecialization && showCard) {
                         const cardDetailedSpecialization = card.getAttribute('data-detailed-specialization');
@@ -250,21 +250,21 @@
                             showCard = false;
                         }
                     }
-                    
+
                     // Gender filter
                     if (selectedGender && showCard) {
                         const cardGender = card.getAttribute('data-gender');
                         const cardService = card.getAttribute('data-service');
                         const cardCommunication = card.getAttribute('data-communication');
-                        
+
                         // Check if the selected gender matches any of the card's attributes
-                        if (selectedGender !== cardGender && 
-                            selectedGender !== cardService && 
+                        if (selectedGender !== cardGender &&
+                            selectedGender !== cardService &&
                             selectedGender !== cardCommunication) {
                             showCard = false;
                         }
                     }
-                    
+
                     // Show or hide card with animation
                     if (showCard) {
                         card.style.display = 'block';
@@ -284,12 +284,12 @@
                         }, 300);
                     }
                 });
-                
+
                 // Show "No results" message if no cards are visible
-                const visibleCards = Array.from(expertCards).filter(card => 
+                const visibleCards = Array.from(expertCards).filter(card =>
                     card.style.display !== 'none' && card.style.opacity !== '0'
                 );
-                
+
                 let noResultsMessage = document.getElementById('no-results');
                 if (visibleCards.length === 0) {
                     if (!noResultsMessage) {
@@ -314,16 +314,16 @@
                     }
                 }
             }
-            
+
             // Add event listeners
             searchInput.addEventListener('input', filterExperts);
             specializationFilter.addEventListener('change', filterExperts);
             experienceFilter.addEventListener('change', filterExperts);
             detailedSpecializationFilter.addEventListener('change', filterExperts);
             genderFilter.addEventListener('change', filterExperts);
-            
+
             // Function to clear all filters
-            window.clearFilters = function() {
+            window.clearFilters = function () {
                 searchInput.value = '';
                 specializationFilter.value = '';
                 experienceFilter.value = '';
@@ -331,7 +331,7 @@
                 genderFilter.value = '';
                 filterExperts();
             };
-            
+
             // Add smooth scrolling for better UX
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -345,7 +345,7 @@
                     }
                 });
             });
-            
+
             // Add loading animation for better UX
             const loadingOverlay = document.createElement('div');
             loadingOverlay.id = 'loading-overlay';
@@ -373,9 +373,9 @@
                 </div>
             `;
             document.body.appendChild(loadingOverlay);
-            
+
             // Show loading on page load
-            window.addEventListener('load', function() {
+            window.addEventListener('load', function () {
                 setTimeout(() => {
                     loadingOverlay.style.opacity = '0';
                     loadingOverlay.style.visibility = 'hidden';
@@ -383,7 +383,7 @@
             });
         });
     </script>
-    
+
     <!-- Add CSS for no results message -->
     <style>
         .no-results {
@@ -392,56 +392,56 @@
             border-radius: 20px;
             border: 2px dashed #dee2e6;
         }
-        
+
         .no-results-content {
             padding: 40px 20px;
         }
-        
+
         .expert {
             transition: all 0.3s ease;
         }
-        
+
         /* Responsive improvements */
         @media (max-width: 768px) {
             .filters .select {
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
-            
+
             .experts-box {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            
+
             .input {
                 padding: 20px !important;
             }
-            
+
             .filters {
                 padding: 20px !important;
             }
         }
-        
+
         @media (max-width: 576px) {
             .expert {
                 padding: 20px !important;
             }
-            
+
             .expert img {
                 width: 100px !important;
                 height: 100px !important;
             }
-            
+
             .expert h3 {
                 font-size: 18px !important;
             }
-            
+
             .expert p {
                 font-size: 14px !important;
             }
         }
     </style>
-    
+
     <!-- JavaScript for Expert System (JSON Loading + Filtering) -->
     <script type="module" src="../dist/main.js"></script>
 </body>

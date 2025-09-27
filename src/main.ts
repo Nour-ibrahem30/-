@@ -41,9 +41,9 @@ interface FilterElements {
 }
 
 class ExpertSystem {
-    private expertCards: NodeListOf<ExpertCard>;
-    private filters: FilterElements;
-    private loadingOverlay: HTMLElement;
+    private expertCards!: NodeListOf<ExpertCard>;
+    private filters!: FilterElements;
+    private loadingOverlay!: HTMLElement;
     private expertsData: ExpertData[] | null = null;
     private expertsContainer: HTMLElement | null = null;
 
@@ -190,8 +190,9 @@ class ExpertSystem {
                 <span>${expert.experience}</span>
             </div>
             <button class="btn btn-primary">احجز جلسة</button>
-            <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
+            <button class="btn btn-primary"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
         `;
+        
 
         return card;
     }
