@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أُسْرَة</title>
+    <!-- Bootstrap RTL -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://db.onlinewebfonts.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Custom CSS -->
+    <link rel="preload" href="../scss/Experts.css" as="style">
+    <link rel="stylesheet" href="../scss/Experts.css">
+    <!-- Fonts -->
+    <link href="https://db.onlinewebfonts.com/c/055514b82245a8345db0e2f933217a7f?family=Somar+Rounded" rel="stylesheet">
+    <!-- Icons Website -->
+    <link rel="icon" type="image/png" sizes="100x100" href="../imges/Group 28.png">
+    <!-- Icons Apple -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../imges/Group 28.png">
+    <!-- FontAwesome -->
+    <link rel="preload" as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </noscript>
+    <!-- Preload Header (LCP) Image used on this page -->
+    <link rel="preload" as="image" href="../imges/header Image.png">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header class="overflow-hidden">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../imges/Logo.png" alt="شعار أُسرة" width="241" height="103">
+                </a>
+                <button class="navbar-toggler w-auto border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="تبديل القائمة">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/about.html">عن أُسرة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Experts.html">الخبراء</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/library.html">مكتبة أُسرة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">أراء العملاء</a>
+                        </li>
+                    </ul>
+                    <button class="btn join-us">أتصل بنا</button>
+                </div>
+            </div>
+        </nav>
+        <div class="content-header">
+            <div class="container d-flex justify-content-evenly align-items-center">
+                <div class="text-center">
+                    <h2 class="text-white mb-1 fs-1 mb-2"> الخبراء</h2>
+                    <p class="text-white fs-6 mt-2"> تعرف على خبرائنا في أُسرة</p>
+                </div>
+                <div class="img h-100">
+                    <img src="../imges/header Image.png" alt="شعار اسرة" fetchpriority="high" decoding="async">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main>
+        <!-- Start Content -->
+        <section class="content py-5">
+            <div class="container">
+                <div class="main-head text-center mb-5">
+                    <h1> الخبراء</h1>
+                    <img src="../imges/Vector 1.png" alt="فاصل زخرفي" class="mt-2" loading="lazy" decoding="async">
+                </div>
+                <div class="input mb-5">
+                    <form action="#" method="post">
+                        <input type="search" name="search" id="search" placeholder="ابحث حسب الأسم, و التخصص">
+                    </form>
+                </div>
+                <div class="filters mb-5">
+                    <div class="select">
+                        <select name="general-specialization" id="general-specialization">
+                            <option value="">اختر التخصص</option>
+                            <optgroup label="التخصصات الرئيسية">
+                                <option value="psychology">الطب النفسي</option>
+                                <option value="family-counseling">الاستشارات الأسرية</option>
+                                <option value="personal-development">التنمية الشخصية</option>
+                                <option value="child-development">تطوير الطفل</option>
+                                <option value="marriage-counseling">استشارات الزواج</option>
+                            </optgroup>
+                        </select>
+                        <select name="experience" id="experience">
+                            <option value="">سنوات الخبرة</option>
+                            <option value="1-2">1-2 سنوات</option>
+                            <option value="3-5">3-5 سنوات</option>
+                            <option value="6-10">6-10 سنوات</option>
+                            <option value="11-15">11-15 سنة</option>
+                            <option value="16-20">16-20 سنة</option>
+                            <option value="20+">أكثر من 20 سنة</option>
+                        </select>
+                        <select name="detailed-specialization" id="detailed-specialization">
+                            <option value="">التخصص التفصيلي</option>
+                            <optgroup label="الطب النفسي">
+                                <option value="child-psychology">طب نفس الأطفال</option>
+                                <option value="adult-psychology">طب نفس البالغين</option>
+                                <option value="family-therapy">العلاج الأسري</option>
+                            </optgroup>
+                            <optgroup label="الاستشارات الأسرية">
+                                <option value="marriage-counseling">استشارات الزواج</option>
+                                <option value="parenting">تربية الأطفال</option>
+                                <option value="family-conflicts">حل النزاعات الأسرية</option>
+                            </optgroup>
+                            <optgroup label="التنمية الشخصية">
+                                <option value="life-coaching">التدريب الشخصي</option>
+                                <option value="career-guidance">التوجيه المهني</option>
+                                <option value="stress-management">إدارة الضغوط</option>
+                            </optgroup>
+                        </select>
+                        <select name="gender" id="gender">
+                            <option value="">النوع</option>
+                            <optgroup label="الجنس">
+                                <option value="male">ذكر</option>
+                                <option value="female">أنثى</option>
+                            </optgroup>
+                            <optgroup label="نوع الخدمة">
+                                <option value="individual">جلسات فردية</option>
+                                <option value="group">جلسات جماعية</option>
+                                <option value="family">جلسات أسرية</option>
+                            </optgroup>
+                            <optgroup label="طريقة التواصل">
+                                <option value="in-person">حضوري</option>
+                                <option value="online">أونلاين</option>
+                                <option value="both">كلاهما</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="experts-box d-flex justify-content-center align-items-center flex-wrap gap-3">
+                    <div class="expert" data-specialization="family-counseling" data-experience="11-15" data-detailed-specialization="family-therapy" data-gender="female" data-service="individual" data-communication="both">
+                        <img src="../imges/cotsh-amira.jpg" alt="Cotsh Amira" loading="lazy" decoding="async">
+                        <h3>د. أميرة حسين</h3>
+                        <p>اخصائي أُسري, مؤسس أُسرة</p>
+                        <div class="exparenisis">
+                            <span>خبرة</span>
+                            <span>15 سنوات</span>
+                        </div>
+                        <button class="btn btn-primary">احجز جلسة</button>
+                        <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
+                    </div>
+                    <div class="expert" data-specialization="family-counseling" data-experience="6-10" data-detailed-specialization="marriage-counseling" data-gender="female" data-service="family" data-communication="in-person">
+                        <img src="../imges/cotash marim sameir.png" alt="Cotsh Marim Sameir" loading="lazy"
+                            decoding="async">
+                        <h3>د. فاطمة علي</h3>
+                        <p>استشارية أسرية</p>
+                        <div class="exparenisis">
+                            <span>خبرة</span>
+                            <span>10 سنوات</span>
+                        </div>
+                        <button class="btn btn-primary">احجز جلسة</button>
+                        <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
+                    </div>
+                    <div class="expert" data-specialization="psychology" data-experience="3-5" data-detailed-specialization="family-therapy" data-gender="female" data-service="group" data-communication="online">
+                        <img src="../imges/cotash marim sameir.png" alt="Cotsh Mohanad" loading="lazy" decoding="async">
+                        <h3>د. مريم سمير</h3>
+                        <p> اخصائي اجتماعي,</p>
+                        <div class="exparenisis">
+                            <span>خبرة</span>
+                            <span>7 سنوات</span>
+                        </div>
+                        <button class="btn btn-primary">احجز جلسة</button>
+                        <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
+                    </div>
+                    <div class="expert" data-specialization="personal-development" data-experience="20+" data-detailed-specialization="life-coaching" data-gender="male" data-service="individual" data-communication="both">
+                        <img src="../imges/Dr Mohmed Harby.jpg" alt="Dr Mohmed Harby" loading="lazy" decoding="async">
+                        <h3>د. محمد حربي</h3>
+                        <p>كوتش شباب, مؤسس قدرات</p>
+                        <div class="exparenisis">
+                            <span>خبرة</span>
+                            <span>25 سنوات</span>
+                        </div>
+                        <button class="btn btn-primary">احجز جلسة</button>
+                        <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
+                    </div>
+                    <div class="expert" data-specialization="family-counseling" data-experience="1-2" data-detailed-specialization="parenting" data-gender="female" data-service="family" data-communication="in-person">
+                        <img src="../imges/omnia Mohamed.png" alt="Omnia Mohamed" loading="lazy" decoding="async">
+                        <h3>د. أمنية محمد</h3>
+                        <p>استشاري اسري</p>
+                        <div class="exparenisis">
+                            <span>خبرة</span>
+                            <span>3 سنوات</span>
+                        </div>
+                        <button class="btn btn-primary">احجز جلسة</button>
+                        <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Content -->
+                 <!-- Start Footer -->
+        <footer class="footer py-5">
+            <div class="container">
+                <div class="content d-flex justify-content-evenly align-items-center">
+                    <div class="img">
+                        <img src="../imges/Logo-Footer.png" alt="شعار أُسرة في التذييل" width="241" height="103"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <div class="text">
+                        <div class="uls d-flex gap-5">
+                            <ul class="unlisted">
+                                <li><a href="#">روابط مختصرة</a></li>
+                                <li><a href="#">الرئيسية</a></li>
+                                <li><a href="#">عن أُسرة</a></li>
+                                <li><a href="#">الخبراء</a></li>
+                                <li><a href="#">مكتبة أُسرة</a></li>
+                                <li><a href="#">أتصل بنا</a></li>
+                            </ul>
+                            <ul class="unlisted">
+                                <li><a href="#">الدعم</a></li>
+                                <li><a href="#">سياسة الاسترجاع</a></li>
+                                <li><a href="#">الشروط والأحكام</a></li>
+                                <li><a href="#">اتصل بنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </main>
+    <!-- End Main -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for Filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all filter elements
+            const searchInput = document.getElementById('search');
+            const specializationFilter = document.getElementById('general-specialization');
+            const experienceFilter = document.getElementById('experience');
+            const detailedSpecializationFilter = document.getElementById('detailed-specialization');
+            const genderFilter = document.getElementById('gender');
+            
+            // Get all expert cards
+            const expertCards = document.querySelectorAll('.expert');
+            
+            // Function to filter experts
+            function filterExperts() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedSpecialization = specializationFilter.value;
+                const selectedExperience = experienceFilter.value;
+                const selectedDetailedSpecialization = detailedSpecializationFilter.value;
+                const selectedGender = genderFilter.value;
+                
+                expertCards.forEach(card => {
+                    let showCard = true;
+                    
+                    // Search filter
+                    if (searchTerm) {
+                        const expertName = card.querySelector('h3').textContent.toLowerCase();
+                        const expertSpecialization = card.querySelector('p').textContent.toLowerCase();
+                        if (!expertName.includes(searchTerm) && !expertSpecialization.includes(searchTerm)) {
+                            showCard = false;
+                        }
+                    }
+                    
+                    // Specialization filter
+                    if (selectedSpecialization && showCard) {
+                        const cardSpecialization = card.getAttribute('data-specialization');
+                        if (cardSpecialization !== selectedSpecialization) {
+                            showCard = false;
+                        }
+                    }
+                    
+                    // Experience filter
+                    if (selectedExperience && showCard) {
+                        const cardExperience = card.getAttribute('data-experience');
+                        if (cardExperience !== selectedExperience) {
+                            showCard = false;
+                        }
+                    }
+                    
+                    // Detailed specialization filter
+                    if (selectedDetailedSpecialization && showCard) {
+                        const cardDetailedSpecialization = card.getAttribute('data-detailed-specialization');
+                        if (cardDetailedSpecialization !== selectedDetailedSpecialization) {
+                            showCard = false;
+                        }
+                    }
+                    
+                    // Gender filter
+                    if (selectedGender && showCard) {
+                        const cardGender = card.getAttribute('data-gender');
+                        const cardService = card.getAttribute('data-service');
+                        const cardCommunication = card.getAttribute('data-communication');
+                        
+                        // Check if the selected gender matches any of the card's attributes
+                        if (selectedGender !== cardGender && 
+                            selectedGender !== cardService && 
+                            selectedGender !== cardCommunication) {
+                            showCard = false;
+                        }
+                    }
+                    
+                    // Show or hide card with animation
+                    if (showCard) {
+                        card.style.display = 'block';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.transition = 'all 0.3s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.transition = 'all 0.3s ease';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(-20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+                
+                // Show "No results" message if no cards are visible
+                const visibleCards = Array.from(expertCards).filter(card => 
+                    card.style.display !== 'none' && card.style.opacity !== '0'
+                );
+                
+                let noResultsMessage = document.getElementById('no-results');
+                if (visibleCards.length === 0) {
+                    if (!noResultsMessage) {
+                        noResultsMessage = document.createElement('div');
+                        noResultsMessage.id = 'no-results';
+                        noResultsMessage.className = 'no-results text-center py-5';
+                        noResultsMessage.innerHTML = `
+                            <div class="no-results-content">
+                                <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                                <h3 class="text-muted">لم يتم العثور على نتائج</h3>
+                                <p class="text-muted">جرب تغيير معايير البحث أو الفلترة</p>
+                                <button class="btn btn-outline-primary mt-3" onclick="clearFilters()">
+                                    مسح جميع الفلاتر
+                                </button>
+                            </div>
+                        `;
+                        document.querySelector('.experts-box').appendChild(noResultsMessage);
+                    }
+                } else {
+                    if (noResultsMessage) {
+                        noResultsMessage.remove();
+                    }
+                }
+            }
+            
+            // Add event listeners
+            searchInput.addEventListener('input', filterExperts);
+            specializationFilter.addEventListener('change', filterExperts);
+            experienceFilter.addEventListener('change', filterExperts);
+            detailedSpecializationFilter.addEventListener('change', filterExperts);
+            genderFilter.addEventListener('change', filterExperts);
+            
+            // Function to clear all filters
+            window.clearFilters = function() {
+                searchInput.value = '';
+                specializationFilter.value = '';
+                experienceFilter.value = '';
+                detailedSpecializationFilter.value = '';
+                genderFilter.value = '';
+                filterExperts();
+            };
+            
+            // Add smooth scrolling for better UX
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add loading animation for better UX
+            const loadingOverlay = document.createElement('div');
+            loadingOverlay.id = 'loading-overlay';
+            loadingOverlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            `;
+            loadingOverlay.innerHTML = `
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جاري التحميل...</span>
+                    </div>
+                    <p class="mt-3 text-primary">جاري التحميل...</p>
+                </div>
+            `;
+            document.body.appendChild(loadingOverlay);
+            
+            // Show loading on page load
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    loadingOverlay.style.opacity = '0';
+                    loadingOverlay.style.visibility = 'hidden';
+                }, 500);
+            });
+        });
+    </script>
+    
+    <!-- Add CSS for no results message -->
+    <style>
+        .no-results {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            border: 2px dashed #dee2e6;
+        }
+        
+        .no-results-content {
+            padding: 40px 20px;
+        }
+        
+        .expert {
+            transition: all 0.3s ease;
+        }
+        
+        /* Responsive improvements */
+        @media (max-width: 768px) {
+            .filters .select {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .experts-box {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .input {
+                padding: 20px !important;
+            }
+            
+            .filters {
+                padding: 20px !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .expert {
+                padding: 20px !important;
+            }
+            
+            .expert img {
+                width: 100px !important;
+                height: 100px !important;
+            }
+            
+            .expert h3 {
+                font-size: 18px !important;
+            }
+            
+            .expert p {
+                font-size: 14px !important;
+            }
+        }
+    </style>
+</body>
+
+</html>
