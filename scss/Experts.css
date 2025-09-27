@@ -325,6 +325,13 @@ header .navbar .join-us:hover {
   }
 }
 @media (max-width: 768px) {
+  header {
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
+  .content-header img {
+    max-width: 380px;
+  }
   .content .input {
     padding: 20px;
     max-width: 100%;
@@ -368,6 +375,13 @@ header .navbar .join-us:hover {
   }
 }
 @media (max-width: 576px) {
+  header {
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .content-header img {
+    max-width: 280px;
+  }
   .content .input {
     padding: 15px;
   }
@@ -414,6 +428,13 @@ header .navbar .join-us:hover {
   }
 }
 @media (max-width: 480px) {
+  header {
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .content-header img {
+    max-width: 200px;
+  }
   .content .input {
     padding: 12px;
   }
