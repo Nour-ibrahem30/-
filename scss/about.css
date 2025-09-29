@@ -197,6 +197,7 @@ header .navbar .join-us:hover {
 
 /* End Cotshaing Section*/
 /* Start Qusation Section*/
+/* Start Qusation Section*/
 .qusation {
   background-color: #F2F2F2;
 }
@@ -208,11 +209,12 @@ header .navbar .join-us:hover {
   padding: 20px !important;
 }
 .qusation .accordion-button {
-  background-color: var(--main-color);
+  background-color: white !important;
   margin-bottom: 15px;
-  color: white;
+  color: var(--main-color) !important;
 }
 
+/* End Qusation Section*/
 /* End Qusation Section*/
 /* Start Footer Section*/
 .footer {
