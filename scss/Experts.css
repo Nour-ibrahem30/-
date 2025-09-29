@@ -489,7 +489,7 @@ header .navbar .join-us:hover {
 }
 
 .footer .img img {
-  width: 550px;
+  width: 550px !important;
   height: auto;
 }
 
