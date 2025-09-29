@@ -189,7 +189,7 @@ class ExpertSystem {
                 <span>خبرة</span>
                 <span>${expert.experience}</span>
             </div>
-            <button class="btn btn-primary">احجز جلسة</button>
+            <a class="btn btn-primary" href="./Experts.html">احجز جلسة</a>
             <button class="btn btn-primary"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
         `;
         
