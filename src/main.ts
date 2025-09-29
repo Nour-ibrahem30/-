@@ -189,7 +189,7 @@ class ExpertSystem {
                 <span>خبرة</span>
                 <span>${expert.experience}</span>
             </div>
-            <button class="btn btn-primary">احجز جلسة</button>
+            <a class="btn btn-primary" href="./Experts.html">احجز جلسة</a>
             <button class="btn btn-primary"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
         `;
         
@@ -209,7 +209,7 @@ class ExpertSystem {
                         <span>خبرة</span>
                         <span>15 سنوات</span>
                     </div>
-                    <button class="btn btn-primary">احجز جلسة</button>
+                    <a class="btn btn-primary" href="./Experts.html">احجز جلسة</a>
                     <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
                 </div>
                 <div class="expert" data-specialization="family-counseling" data-experience="6-10" data-detailed-specialization="marriage-counseling" data-gender="female" data-service="family" data-communication="in-person">
@@ -220,7 +220,7 @@ class ExpertSystem {
                         <span>خبرة</span>
                         <span>10 سنوات</span>
                     </div>
-                    <button class="btn btn-primary">احجز جلسة</button>
+                    <a class="btn btn-primary" href="./Experts.html">احجز جلسة</a>
                     <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
                 </div>
                 <div class="expert" data-specialization="psychology" data-experience="3-5" data-detailed-specialization="family-therapy" data-gender="female" data-service="group" data-communication="online">
@@ -231,7 +231,7 @@ class ExpertSystem {
                         <span>خبرة</span>
                         <span>7 سنوات</span>
                     </div>
-                    <button class="btn btn-primary">احجز جلسة</button>
+                    <a class="btn btn-primary" href="./Experts.html">احجز جلسة</a>
                     <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
                 </div>
                 <div class="expert" data-specialization="personal-development" data-experience="20+" data-detailed-specialization="life-coaching" data-gender="male" data-service="individual" data-communication="both">
@@ -242,7 +242,7 @@ class ExpertSystem {
                         <span>خبرة</span>
                         <span>25 سنوات</span>
                     </div>
-                    <button class="btn btn-primary">احجز جلسة</button>
+                    <a class="btn btn-primary" href="./Experts.html">احجز جلسة</a>
                     <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
                 </div>
                 <div class="expert" data-specialization="family-counseling" data-experience="1-2" data-detailed-specialization="parenting" data-gender="female" data-service="family" data-communication="in-person">
@@ -253,7 +253,7 @@ class ExpertSystem {
                         <span>خبرة</span>
                         <span>3 سنوات</span>
                     </div>
-                    <button class="btn btn-primary">احجز جلسة</button>
+                    <a class="btn btn-primary" href="./Experts.html">احجز جلسة</a>
                     <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
                 </div>
             `;
