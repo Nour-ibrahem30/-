@@ -120,7 +120,6 @@ header {
 .who-are {
     .content {
         .img {
-            border: 5px solid var(--main-color);
             border-radius: 10px;
             max-width: 100%;
             height: auto;
@@ -144,10 +143,13 @@ header {
 /* End who Are We */
 /* Start Info Section*/
 .info {
-    p {
-        line-height: 1.8;
-        color: #3B3B3B;
-        font-size: 23px;
+    .content {
+            p {
+                line-height: 1.8;
+                color: #3B3B3B;
+                font-size: 23px;
+                width: 627px;
+            }
     }
 }
 
@@ -242,6 +244,7 @@ header {
     }
 
 }
+
 /* End Footer Section*/
 /* Responsive utilities */
 @media (max-width: 991.98px) {
@@ -268,7 +271,7 @@ header {
     }
 
     .navbar img {
-        width: 180px  !important;
+        width: 180px !important;
         height: auto !important;
     }
 
@@ -309,6 +312,7 @@ header {
         max-width: 520px;
         margin-inline: auto;
     }
+
     header {
         border-bottom-right-radius: 80px;
         border-bottom-left-radius: 80px;
@@ -363,6 +367,7 @@ header {
         width: 160px;
         height: auto;
     }
+
     header {
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;

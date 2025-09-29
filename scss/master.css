@@ -60,6 +60,7 @@ button.btn-hero-two:hover {
 .navbar {
   background-color: var(--main-color) !important;
   height: auto;
+  /* Make the Bootstrap navbar-toggler white */
 }
 .navbar img {
   width: 241px;

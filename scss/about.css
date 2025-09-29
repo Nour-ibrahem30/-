@@ -104,7 +104,6 @@ header .navbar .join-us:hover {
 /* End Header*/
 /* Start who Are We*/
 .who-are .content .img {
-  border: 5px solid var(--main-color);
   border-radius: 10px;
   max-width: 100%;
   height: auto;
@@ -121,10 +120,11 @@ header .navbar .join-us:hover {
 
 /* End who Are We */
 /* Start Info Section*/
-.info p {
+.info .content p {
   line-height: 1.8;
   color: #3B3B3B;
   font-size: 23px;
+  width: 627px;
 }
 
 /* End Info Section*/
