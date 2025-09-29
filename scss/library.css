@@ -200,6 +200,10 @@ article .article-text .card .btn-hero-one {
   flex-wrap: wrap;
 }
 
+.footer .img img {
+  width: 550px;
+  height: auto;
+}
 /* Responsive utilities */
 @media (max-width: 991.98px) {
   header .content-header .container {
