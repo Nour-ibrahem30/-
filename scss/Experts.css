@@ -104,7 +104,6 @@ header .navbar .join-us:hover {
 /* End Header*/
 /* Start Content*/
 .content .input {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 25px;
   border-radius: 20px;
   max-width: 900px;
@@ -121,7 +120,7 @@ header .navbar .join-us:hover {
 .content .input input {
   width: 100%;
   background-color: white;
-  border: 2px solid transparent;
+  border: 2px solid rgba(204, 204, 204, 0.3607843137);
   outline: none;
   font-size: 18px;
   font-weight: 500;

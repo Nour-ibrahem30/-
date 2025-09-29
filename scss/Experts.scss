@@ -119,7 +119,6 @@ header {
 /* Start Content*/
 .content {
     .input {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         padding: 25px;
         border-radius: 20px;
         max-width: 900px;
@@ -137,7 +136,7 @@ header {
         input {
             width: 100%;
             background-color: white;
-            border: 2px solid transparent;
+            border: 2px solid #cccccc5c;
             outline: none;
             font-size: 18px;
             font-weight: 500;
@@ -194,10 +193,10 @@ header {
                 transition: all var(--main-transition);
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
-            &:focus {
+                &:focus {
                     border-color: var(--main-color);
                     box-shadow: 0 0 0 3px rgba(0, 134, 149, 0.1);
-                outline: none;
+                    outline: none;
                 }
 
                 &:hover {
@@ -254,7 +253,7 @@ header {
                 border: 4px solid rgba(0, 134, 149, 0.1);
                 transition: all var(--main-transition);
 
-            &:hover {
+                &:hover {
                     border-color: var(--main-color);
                     transform: scale(1.05);
                 }
@@ -323,7 +322,7 @@ header {
                         background: linear-gradient(135deg, #007a87 0%, #0096a3 100%);
                     }
 
-            &:active {
+                    &:active {
                         transform: translateY(0);
                     }
                 }
@@ -363,7 +362,7 @@ header {
                 gap: 15px;
             }
         }
-        
+
         .experts-box {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
@@ -380,53 +379,53 @@ header {
     .content-header img {
         max-width: 380px;
     }
-    
+
     .content {
         .input {
             padding: 20px;
             max-width: 100%;
         }
-        
+
         .filters {
             padding: 20px;
-            
+
             .select {
                 grid-template-columns: 1fr;
                 gap: 15px;
-                
+
                 select {
                     height: 50px;
                     font-size: 15px;
                 }
             }
         }
-        
+
         .experts-box {
             grid-template-columns: 1fr;
             gap: 20px;
             margin-top: 30px;
-            
+
             .expert {
                 padding: 20px;
-                
+
                 img {
                     width: 100px;
                     height: 100px;
                 }
-                
+
                 h3 {
                     font-size: 20px;
                 }
-                
+
                 p {
                     font-size: 15px;
                 }
-                
+
                 .exparenisis {
                     padding: 10px 15px;
                     font-size: 13px;
                 }
-                
+
                 .btn {
                     height: 40px;
                     font-size: 15px;
@@ -445,20 +444,20 @@ header {
     .content-header img {
         max-width: 280px;
     }
-    
+
     .content {
         .input {
             padding: 15px;
-            
+
             input {
                 font-size: 16px;
                 padding: 12px 15px;
             }
         }
-        
+
         .filters {
             padding: 15px;
-            
+
             .select {
                 select {
                     height: 45px;
@@ -467,35 +466,35 @@ header {
                 }
             }
         }
-        
+
         .experts-box {
             gap: 15px;
-            
+
             .expert {
                 padding: 15px;
-                
+
                 img {
                     width: 80px;
                     height: 80px;
                     margin-bottom: 15px;
                 }
-                
+
                 h3 {
                     font-size: 18px;
                     margin-bottom: 8px;
                 }
-                
+
                 p {
                     font-size: 14px;
                     margin-bottom: 12px;
                 }
-                
+
                 .exparenisis {
                     padding: 8px 12px;
                     font-size: 12px;
                     margin-bottom: 15px;
                 }
-                
+
                 .btn {
                     height: 38px;
                     font-size: 14px;
@@ -515,45 +514,45 @@ header {
     .content-header img {
         max-width: 200px;
     }
-    
+
     .content {
         .input {
             padding: 12px;
-            
+
             input {
                 font-size: 15px;
                 padding: 10px 12px;
             }
         }
-        
+
         .filters {
             padding: 12px;
-            
+
             .select {
                 select {
                     height: 42px;
                     font-size: 13px;
+                }
             }
         }
-    }
 
-    .experts-box {
-        .expert {
+        .experts-box {
+            .expert {
                 padding: 12px;
-                
+
                 img {
                     width: 70px;
                     height: 70px;
                 }
-                
+
                 h3 {
                     font-size: 16px;
                 }
-                
+
                 p {
                     font-size: 13px;
                 }
-                
+
                 .btn {
                     height: 35px;
                     font-size: 13px;
@@ -562,10 +561,11 @@ header {
         }
     }
 }
+
 /* Start Footer Section*/
 .footer {
     background-color: var(--main-color);
-                display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -588,6 +588,7 @@ header {
     }
 
 }
+
 /* End Footer Section*/
 
 /* Animation improvements */
@@ -596,6 +597,7 @@ header {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -607,6 +609,7 @@ header {
         opacity: 1;
         transform: translateY(0);
     }
+
     to {
         opacity: 0;
         transform: translateY(-30px);
@@ -642,8 +645,13 @@ header {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Focus states for accessibility */
@@ -659,7 +667,7 @@ button:focus {
     .expert {
         border: 2px solid var(--main-color);
     }
-    
+
     .btn-primary {
         border: 2px solid var(--main-color);
     }
