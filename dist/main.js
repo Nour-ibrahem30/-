@@ -50,7 +50,7 @@ class ExpertSystem {
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden">جاري التحميل...</span>
                 </div>
-                <p class="mt-3 text-primary">جاري التحميل...</p>
+                <p class="mt-3 text-white">جاري التحميل...</p>
             </div>
         `;
         document.body.appendChild(this.loadingOverlay);
@@ -58,7 +58,7 @@ class ExpertSystem {
             setTimeout(() => {
                 this.loadingOverlay.style.opacity = '0';
                 this.loadingOverlay.style.visibility = 'hidden';
-            }, 500);
+            }, 1000);
         });
     }
     setupSmoothScrolling() {
