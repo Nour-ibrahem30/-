@@ -117,12 +117,18 @@ class ExpertSystem {
                 <span>${expert.experience}</span>
             </div>
             <button class="btn btn-primary book-session">احجز جلسة</button>
-            <button class="btn btn-hero-two"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
+            <button class="btn btn-hero-one profile-btn" data-id="${expert.id}">عرض الملف الشخصي</button>
         `;
         const bookButton = card.querySelector('.book-session');
         if (bookButton) {
             bookButton.addEventListener('click', () => {
                 window.location.href = './Experts.html';
+            });
+        }
+        const profileButton = card.querySelector('.profile-btn');
+        if (profileButton) {
+            profileButton.addEventListener('click', () => {
+                window.location.href = `./portflio.html?id=${expert.id}`;
             });
         }
         return card;

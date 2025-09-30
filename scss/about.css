@@ -249,40 +249,11 @@ header .navbar .join-us:hover {
 .footer ul li .uls {
   flex-wrap: wrap;
 }
-
 .footer .img img {
   width: 550px;
   height: auto;
 }
 
-/* Page Loader */
-.page-loader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: var(--main-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 99999;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-.page-loader.is-hiding {
-  opacity: 0;
-  visibility: hidden;
-}
-.page-loader__logo {
-  width: clamp(180px, 40vw, 360px);
-  height: auto;
-  animation: logoBreath 2.6s ease-in-out infinite alternate;
-}
-@keyframes logoBreath {
-  0%   { transform: scale(0.9);  opacity: 0.9; }
-  50%  { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(0.98); opacity: 0.95; }
-}
 /* End Footer Section*/
 /* Responsive utilities */
 @media (max-width: 991.98px) {

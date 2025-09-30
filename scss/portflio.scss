@@ -55,18 +55,19 @@ button {
     }
 }
 
-        .image-loaded {
-        animation: fadeIn 1s ease-in-out forwards;
+.image-loaded {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    to {
+        opacity: 1;
     }
+}
 
 /* End Global*/
 /* Start Navbar*/
@@ -102,32 +103,140 @@ button {
 /* End Navbar*/
 /* Start Active Profile*/
 .active-profile {
-    .img {
+    .profile-data {
         img {
-            &:first-child {
-                width: 100%;
-                height: 300px;
-            }
-
-            &:last-child {
-                width: 259px;
-                height: 117px;
-
-
-            }
-        }
-
-        position: relative;
-
-        &::before {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 100%;
-            background-color: var(--main-color);
-            opacity: 0.8;
+            width: 232px !important;
+            height: 232px !important;
+            border-radius: 116.23px !important;
+            border-width: 7.68px !important;
+            background-color: white;
+            position: relative;
+            bottom: 55px;
+            padding: 15px;
         }
     }
 }
+    // تحسين تنسيقات صفحة الملف الشخصي
+    .active-profile {
+        background: #fff;
+        min-height: 100vh;
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 0 15px;
+        }
+        .cover-box {
+            position: relative;
+            margin-bottom: 30px;
+            img {
+                border-radius: 20px;
+                width: 100%;
+                max-height: 180px;
+                object-fit: cover;
+            }
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                width: 120px;
+                z-index: 2;
+            }
+        }
+        .profile-info {
+            h2 {
+                color: var(--main-color);
+                font-weight: bold;
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+            h4 {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 0.5rem;
+            }
+            #profile-rating {
+                color: #FFA500;
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+            #profile-desc {
+                font-size: 1rem;
+                color: #555;
+            }
+        }
+        .profile-img img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            box-shadow: 0 2px 8px #ccc;
+            background: #fff;
+        }
+        #book-session {
+            background: var(--main-color);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+            &:hover {
+                background: #006d7a;
+            }
+        }
+        .video-box {
+            position: relative;
+            margin-bottom: 30px;
+            img {
+                border-radius: 18px;
+                width: 100%;
+                max-height: 260px;
+                object-fit: cover;
+            }
+            #watch-video {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                background: rgba(0,134,149,0.85);
+                color: #fff !important;
+                border-radius: 8px;
+                padding: 8px 18px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                i {
+                    margin-left: 8px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        h3 {
+            color: var(--main-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .profile-data {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 40px;
+            img {
+                width: 232px !important;
+                height: 232px !important;
+                border-radius: 116.23px !important;
+                border-width: 7.68px !important;
+                object-fit: cover;
+                border: 6px solid #fff;
+                box-shadow: 0 2px 8px #ccc;
+                background: #fff;
+            }
+        }
+    }
 
 /* End Active Profile*/
