@@ -31,8 +31,8 @@
     document.body.style.opacity = '0.8';
     document.documentElement.style.overflow = 'hidden';
 
-    var DISPLAY_MS = 1800; // duration to keep loader visible
-    var FADE_MS = 400; // fade-out duration should match CSS
+    var DISPLAY_MS = 2800; // duration to keep loader visible (longer)
+    var FADE_MS = 500; // fade-out duration should match CSS
 
     setTimeout(function () {
       overlay.classList.add('is-hiding');
