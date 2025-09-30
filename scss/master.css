@@ -432,6 +432,11 @@ button.btn-hero-two:hover {
   flex-wrap: wrap;
 }
 
+.footer .img img {
+  width: 550px;
+  height: auto;
+}
+
 /* Responsive utilities */
 @media (max-width: 991.98px) {
   .hero .container,

@@ -500,6 +500,11 @@ header .navbar .join-us:hover {
   flex-wrap: wrap;
 }
 
+.footer .img img {
+  width: 550px !important;
+  height: auto;
+}
+
 /* End Footer Section*/
 /* Animation improvements */
 @keyframes fadeInUp {
