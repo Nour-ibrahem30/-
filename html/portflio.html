@@ -74,10 +74,49 @@
      <!-- Start Active Profile -->
       <div class="active-profile">
         <div class="container">
-            <div class="img mt-5">
-                <img src="../imges/Porfile Coach Cover.png" alt="Porfile Coach Cover">
+            <div class="active-profile">
+                <div class="container py-4 px-3">
+                    <div class="row">
+                        <div class="col-12 mt-3 mb-2">
+                            <a href="javascript:history.back()" style="color:var(--main-color);font-weight:bold;font-size:16px;">
+                                <i class="fa fa-arrow-left"></i> الرجوع للخلف
+                            </a>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="cover-box position-relative" style="max-width:900px;margin:auto;">
+                                <img src="../imges/Porfile Coach Cover.png" alt="Porfile Coach Cover" class="w-100" style="border-radius:20px;">
+                                <img src="../imges/Logo.png" alt="logo" style="position:absolute;top:30px;left:30px;width:120px;">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-4" style="max-width:900px;margin:auto;">
+                                <div class="profile-info text-end" style="flex:1;min-width:250px;">
+                                    <h2 id="profile-name" style="color:var(--main-color);font-weight:bold;">اسم الخبير</h2>
+                                    <h4 id="profile-title" style="font-weight:normal;">اللقب</h4>
+                                    <div id="profile-rating" style="color:#FFA500;font-size:18px;">⭐ (4.9) التقييمات</div>
+                                    <div id="profile-desc" class="mt-2" style="font-size:15px;">وصف مختصر للخبير</div>
+                                </div>
+                                <div class="profile-img text-center" style="margin-right:30px;">
+                                    <img id="profile-photo" src="../imges/cotsh-amira.jpg" alt="profile" class="rounded-circle" style="width:140px;height:140px;object-fit:cover;border:6px solid #fff;box-shadow:0 4px 16px #b6c7d6;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center mb-4">
+                            <button id="book-session" class="btn btn-primary shadow-sm" style="width:220px;font-size:20px;transition:all 0.3s;">احجز جلسة</button>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="video-box position-relative" style="max-width:700px;margin:auto;">
+                                <img id="profile-video-thumb" src="../imges/active-image.jpg" alt="video-thumb" class="w-100 rounded-4" style="box-shadow:0 2px 12px #d0e2ea;">
+                                <a href="#" id="watch-video" class="btn btn-link position-absolute" style="color:var(--main-color);font-size:18px;font-weight:bold;bottom:20px;right:20px;background:var(--main-color);color:#fff !important;border-radius:8px;padding:8px 18px;box-shadow:0 2px 8px #b6c7d6;transition:background 0.3s,box-shadow 0.3s;"><i class="fa fa-play"></i> شاهد الفيديو</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <h3 class="mt-5 mb-3 text-center" style="color:var(--main-color);font-weight:bold;letter-spacing:1px;">عن الخبير</h3>
+                            <div id="profile-data" class="profile-data mb-5 text-center" style="line-height:1.8;">وصف تفصيلي للخبير من ملف json</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="profile-data"></div>
         </div>
       </div>
      <!-- End Active Profile -->

@@ -107,17 +107,24 @@ button.btn-hero-two:hover {
 }
 
 .active-profile {
-  background: #fff;
+  background: #f7fafd;
   min-height: 100vh;
+  box-shadow: 0 2px 16px #e0e7ef;
 }
 .active-profile .container {
   max-width: 950px;
   margin: auto;
   padding: 0 15px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 16px #e0e7ef;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .active-profile .cover-box {
   position: relative;
   margin-bottom: 30px;
+  box-shadow: 0 2px 12px #d0e2ea;
 }
 .active-profile .cover-box img {
   border-radius: 20px;
@@ -136,22 +143,26 @@ button.btn-hero-two:hover {
 .active-profile .profile-info h2 {
   color: var(--main-color);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 .active-profile .profile-info h4 {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.15rem;
+  color: #555;
   margin-bottom: 0.5rem;
 }
 .active-profile .profile-info #profile-rating {
   color: #FFA500;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 .active-profile .profile-info #profile-desc {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.08rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 10px;
 }
 .active-profile .profile-img img {
   width: 140px;
@@ -160,7 +171,7 @@ button.btn-hero-two:hover {
      object-fit: cover;
   border-radius: 50%;
   border: 6px solid #fff;
-  box-shadow: 0 2px 8px #ccc;
+  box-shadow: 0 4px 16px #b6c7d6;
   background: #fff;
 }
 .active-profile #book-session {
@@ -171,10 +182,13 @@ button.btn-hero-two:hover {
   font-weight: bold;
   border: none;
   margin-bottom: 20px;
-  transition: background 0.3s;
+  box-shadow: 0 2px 8px #b6c7d6;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 .active-profile #book-session:hover {
   background: #006d7a;
+  box-shadow: 0 4px 16px #b6c7d6;
+  transform: translateY(-2px) scale(1.03);
 }
 .active-profile .video-box {
   position: relative;
@@ -186,12 +200,13 @@ button.btn-hero-two:hover {
   max-height: 260px;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: 0 2px 12px #d0e2ea;
 }
 .active-profile .video-box #watch-video {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: rgba(0, 134, 149, 0.85);
+  background: var(--main-color);
   color: #fff !important;
   border-radius: 8px;
   padding: 8px 18px;
@@ -200,6 +215,13 @@ button.btn-hero-two:hover {
   text-decoration: none;
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 8px #b6c7d6;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.active-profile .video-box #watch-video:hover {
+  background: #006d7a;
+  box-shadow: 0 4px 16px #b6c7d6;
+  transform: scale(1.05);
 }
 .active-profile .video-box #watch-video i {
   margin-left: 8px;
@@ -208,15 +230,17 @@ button.btn-hero-two:hover {
 .active-profile h3 {
   color: var(--main-color);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-top: 40px;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 .active-profile .profile-data {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.13rem;
   color: #333;
   margin-bottom: 40px;
+  line-height: 1.8;
 }
 .active-profile .profile-data img {
   width: 232px !important;
@@ -226,8 +250,9 @@ button.btn-hero-two:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border: 6px solid #fff;
-  box-shadow: 0 2px 8px #ccc;
+  box-shadow: 0 4px 16px #b6c7d6;
   background: #fff;
+  margin-bottom: 18px;
 }
 
 /* End Active Profile*//*# sourceMappingURL=portflio.css.map */
