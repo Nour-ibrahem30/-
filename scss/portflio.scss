@@ -8,7 +8,6 @@ body {
     font-family: 'Somar Rounded', sans-serif;
 }
 
-/* Ensure images scale within their containers */
 img {
     max-width: 100%;
     height: auto;
@@ -16,7 +15,7 @@ img {
 
 ::selection {
     background-color: var(--main-color);
-    color:var(--main-color);
+    color: white;
 }
 
 .main-head {
@@ -48,13 +47,11 @@ button {
         color: var(--main-color);
         transition: var(--main-transition);
 
-
         &:hover {
             background-color: var(--main-color);
             color: white;
         }
     }
-
 }
 
 .image-loaded {
@@ -62,17 +59,12 @@ button {
     background-color: var(--main-color);
     position: relative;
     z-index: 1;
-    }
-    
-    .image-loaded {
-       animation: fadeIn 1s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }

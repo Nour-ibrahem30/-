@@ -8,7 +8,6 @@ body {
   font-family: "Somar Rounded", sans-serif;
 }
 
-/* Ensure images scale within their containers */
 img {
   max-width: 100%;
   height: auto;
@@ -16,12 +15,12 @@ img {
 
 ::-moz-selection {
   background-color: var(--main-color);
-  color: var(--main-color);
+  color: white;
 }
 
 ::selection {
   background-color: var(--main-color);
-  color: var(--main-color);
+  color: white;
 }
 
 .main-head h1 {
@@ -59,10 +58,6 @@ button.btn-hero-two:hover {
   background-color: var(--main-color);
   position: relative;
   z-index: 1;
-}
-
-.image-loaded {
-  animation: fadeIn 1s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
