@@ -67,7 +67,7 @@ class ExpertSystem {
 
         // Get experts container
         this.expertsContainer = document.querySelector('.experts-box');
-        
+
         // Get all expert cards (will be populated after loading)
         this.expertCards = document.querySelectorAll('.expert') as NodeListOf<ExpertCard>;
     }
@@ -143,7 +143,7 @@ class ExpertSystem {
             const response = await fetch('../data/experts.json');
             const data = await response.json();
             this.expertsData = data.experts;
-            
+
             if (this.expertsContainer) {
                 this.renderExperts();
             }
@@ -192,7 +192,7 @@ class ExpertSystem {
             <button class="btn btn-primary book-session">احجز جلسة</button>
             <button class="btn btn-primary"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
         `;
-        
+
         // Attach navigation for book session button
         const bookButton = card.querySelector('.book-session') as HTMLButtonElement | null;
         if (bookButton) {
@@ -264,7 +264,7 @@ class ExpertSystem {
                     <button class="btn btn-primary"><a href="#"> عرض الملف الشخصي</a></button>
                 </div>
             `;
-            
+
             // Update expert cards reference after fallback rendering
             this.expertCards = document.querySelectorAll('.expert') as NodeListOf<ExpertCard>;
 
@@ -339,7 +339,7 @@ class ExpertSystem {
 
             // Show or hide card with animation
             this.animateCard(card, showCard);
-            
+
             if (showCard) {
                 visibleCardsCount++;
             }
@@ -373,7 +373,7 @@ class ExpertSystem {
     // Handle no results state
     private handleNoResults(visibleCardsCount: number): void {
         let noResultsMessage = document.getElementById('no-results');
-        
+
         if (visibleCardsCount === 0) {
             if (!noResultsMessage) {
                 noResultsMessage = document.createElement('div');
@@ -414,7 +414,7 @@ class ExpertSystem {
             this.expertsData.push(expertData);
             const expertCard = this.createExpertCard(expertData);
             this.expertsContainer.appendChild(expertCard);
-            
+
             // Update expert cards reference
             this.expertCards = document.querySelectorAll('.expert') as NodeListOf<ExpertCard>;
         }
@@ -441,3 +441,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export for potential use in other modules
 export default ExpertSystem;
+
+// Select Elemnets
+window.onload = function () {
+    const image = document.querySelector('.logo') as HTMLImageElement | null;
+    setTimeout(() => {
+        if (image) {
+            image.className = `image-loaded`;
+        }
+
+        document.body.style.opacity = '1';
+    }, 3000);
+    image?.classList.remove('image-loaded');
+}

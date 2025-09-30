@@ -324,4 +324,14 @@ document.addEventListener('DOMContentLoaded', () => {
     new ExpertSystem();
 });
 export default ExpertSystem;
+window.onload = function () {
+    const image = document.querySelector('.logo');
+    setTimeout(() => {
+        if (image) {
+            image.className = `image-loaded`;
+        }
+        document.body.style.opacity = '1';
+    }, 3000);
+    image?.classList.remove('image-loaded');
+};
 //# sourceMappingURL=main.js.map
