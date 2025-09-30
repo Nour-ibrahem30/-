@@ -33,9 +33,10 @@
         imagesrcset="../imges/679494a18f61b1c17b73a8bb03c121f3858e9e59.png 735w"
         imagesizes="(min-width: 992px) 735px, 90vw">
 </head>
+
 <body>
     <!-- Start navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
         <div class="container">
             <a class="navbar-brand" href="../index.html">
                 <img src="../imges/Logo.png" alt="شعار أُسرة" width="241" height="103" fetchpriority="high">
@@ -51,13 +52,13 @@
                         <a class="nav-link active" aria-current="page" href="../index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./html/about.html">عن أُسرة</a>
+                        <a class="nav-link" href="../html/about.html">عن أُسرة</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./html/Experts.html">الخبراء</a>
+                        <a class="nav-link" href="../html/Experts.html">الخبراء</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./html/library.html">مكتبة أُسرة</a>
+                        <a class="nav-link" href="../html/library.html">مكتبة أُسرة</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">أراء العملاء</a>
@@ -71,55 +72,49 @@
         </div>
     </nav>
     <!-- End navbar -->
-     <!-- Start Active Profile -->
-      <div class="active-profile">
+    <!-- Start Active Profile -->
+    <div class="active-profile">
         <div class="container">
-            <div class="active-profile">
-                <div class="container py-4 px-3">
-                    <div class="row">
-                        <div class="col-12 mt-3 mb-2">
-                            <a href="javascript:history.back()" style="color:var(--main-color);font-weight:bold;font-size:16px;">
-                                <i class="fa fa-arrow-left"></i> الرجوع للخلف
-                            </a>
-                        </div>
-                        <div class="col-12 mb-4">
-                            <div class="cover-box position-relative" style="max-width:900px;margin:auto;">
-                                <img src="../imges/Porfile Coach Cover.png" alt="Porfile Coach Cover" class="w-100" style="border-radius:20px;">
-                                <img src="../imges/Logo.png" alt="logo" style="position:absolute;top:30px;left:30px;width:120px;">
-                            </div>
-                        </div>
-                        <div class="col-12 mb-4">
-                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-4" style="max-width:900px;margin:auto;">
-                                <div class="profile-info text-end" style="flex:1;min-width:250px;">
-                                    <h2 id="profile-name" style="color:var(--main-color);font-weight:bold;">اسم الخبير</h2>
-                                    <h4 id="profile-title" style="font-weight:normal;">اللقب</h4>
-                                    <div id="profile-rating" style="color:#FFA500;font-size:18px;">⭐ (4.9) التقييمات</div>
-                                    <div id="profile-desc" class="mt-2" style="font-size:15px;">وصف مختصر للخبير</div>
-                                </div>
-                                <div class="profile-img text-center" style="margin-right:30px;">
-                                    <img id="profile-photo" src="../imges/cotsh-amira.jpg" alt="profile" class="rounded-circle" style="width:140px;height:140px;object-fit:cover;border:6px solid #fff;box-shadow:0 4px 16px #b6c7d6;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center mb-4">
-                            <button id="book-session" class="btn btn-primary shadow-sm" style="width:220px;font-size:20px;transition:all 0.3s;">احجز جلسة</button>
-                        </div>
-                        <div class="col-12 mb-4">
-                            <div class="video-box position-relative" style="max-width:700px;margin:auto;">
-                                <img id="profile-video-thumb" src="../imges/active-image.jpg" alt="video-thumb" class="w-100 rounded-4" style="box-shadow:0 2px 12px #d0e2ea;">
-                                <a href="#" id="watch-video" class="btn btn-link position-absolute" style="color:var(--main-color);font-size:18px;font-weight:bold;bottom:20px;right:20px;background:var(--main-color);color:#fff !important;border-radius:8px;padding:8px 18px;box-shadow:0 2px 8px #b6c7d6;transition:background 0.3s,box-shadow 0.3s;"><i class="fa fa-play"></i> شاهد الفيديو</a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <h3 class="mt-5 mb-3 text-center" style="color:var(--main-color);font-weight:bold;letter-spacing:1px;">عن الخبير</h3>
-                            <div id="profile-data" class="profile-data mb-5 text-center" style="line-height:1.8;">وصف تفصيلي للخبير من ملف json</div>
+            <div class="img mt-5">
+                <img src="../imges/Porfile Coach Cover.png" alt="profile image">
+            </div>
+            <div class="profile-data" id="profile-data"></div>
+
+        </div>
+        </div>
+                <!-- Start Footer -->
+        <footer class="footer py-5">
+            <div class="container">
+                <div class="content d-flex justify-content-evenly align-items-center">
+                    <div class="img">
+                        <img src="../imges/Logo-Footer.png" alt="شعار أُسرة في التذييل" width="241" height="103"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <div class="text">
+                        <div class="uls d-flex gap-5">
+                            <ul class="unlisted">
+                                <li><a href="#">روابط مختصرة</a></li>
+                                <li><a href="#">الرئيسية</a></li>
+                                <li><a href="#">عن أُسرة</a></li>
+                                <li><a href="#">الخبراء</a></li>
+                                <li><a href="#">مكتبة أُسرة</a></li>
+                                <li><a href="#">أتصل بنا</a></li>
+                            </ul>
+                            <ul class="unlisted">
+                                <li><a href="#">الدعم</a></li>
+                                <li><a href="#">سياسة الاسترجاع</a></li>
+                                <li><a href="#">الشروط والأحكام</a></li>
+                                <li><a href="#">اتصل بنا</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
-     <!-- End Active Profile -->
-<script src="portflio-profile.js"></script>
+        </footer>
+        <!-- End Footer -->
+    </div>
+    <!-- End Active Profile -->
+    <script src="portflio-profile.js"></script>
 </body>
+
 </html>

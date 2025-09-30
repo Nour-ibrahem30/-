@@ -16,19 +16,32 @@ fetch('../data/experts.json')
             return;
         }
         // ضع بيانات الشخص فقط داخل div جديد
-        const profileDiv = document.getElementById('profile-data');
-        if (profileDiv) {
-            profileDiv.classList.add('profile-data');
-            profileDiv.innerHTML = `
-        <div class="profile-top d-flex align-items-center mb-3 justify-content-space-evenly position-relative">
-        <img src="${expert.image}" alt="${expert.alt}">
-            <div class = "text position-absolute">
-            <h2>${expert.name}</h2>
-          <h4>${expert.title}</h4>
+const profileDiv = document.getElementById('profile-data');
+if (profileDiv) {
+  profileDiv.classList.add('profile-data');
+  profileDiv.innerHTML = `
+    <div class="parent-content d-flex align-items-center gap-4 position-relative justify-content-between">
+      <div class="parent-content-two d-flex align-items-center gap-4">
+        <div class="content">
+          <div class="img">
+            <img src="${expert.image}" alt="${expert.alt}">
           </div>
-          </div>
-          <p><strong>الخبرة:</strong> ${expert.experience}</p>
-          <p><strong>الوصف:</strong> ${expert.description}</p>
-        `;
-        }
+        </div>
+        <div class="text-content">
+          <h2 class="mb-2">${expert.name}</h2>
+          <p>${expert.title}</p>
+        </div>
+      </div>
+  <button class="btn btn-hero-one mt-3">
+     <a href="https://wa.me/201040031584?text=أرغب%20في%20حجز%20جلسة%20مع%20${encodeURIComponent(expert.name)}" class="text-decoration-none" target="_blank">احجز جلسة</a>
+  </button>
+    </div>
+
+    <div class="about-expert mt-4">
+      <img src="${expert.image}" alt="${expert.alt}" class="img-about mb-5">
+      <h3 class="mb-3">نبذة عن ${expert.name}</h3>
+      <p>${expert.bio}</p>
+    </div>
+  `;
+}
     });

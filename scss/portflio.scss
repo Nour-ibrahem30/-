@@ -16,7 +16,7 @@ img {
 
 ::selection {
     background-color: var(--main-color);
-    color: white;
+    color:var(--main-color);
 }
 
 .main-head {
@@ -48,15 +48,24 @@ button {
         color: var(--main-color);
         transition: var(--main-transition);
 
+
         &:hover {
             background-color: var(--main-color);
             color: white;
         }
     }
+
 }
 
 .image-loaded {
     animation: fadeIn 1s ease-in-out forwards;
+    background-color: var(--main-color);
+    position: relative;
+    z-index: 1;
+    }
+    
+    .image-loaded {
+       animation: fadeIn 1s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -85,6 +94,15 @@ button {
         margin-right: 15px;
     }
 
+    /* Make the Bootstrap navbar-toggler white */
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.9) !important;
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+    }
+
     .join-us {
         width: 177px;
         height: 45px;
@@ -101,167 +119,118 @@ button {
 }
 
 /* End Navbar*/
-/* Start Active Profile*/
+
+/* Start Active Profile */
 .active-profile {
     .profile-data {
-        img {
-            width: 232px !important;
-            height: 232px !important;
-            border-radius: 116.23px !important;
-            border-width: 7.68px !important;
+        .parent-content {
+            justify-content: space-between;
+            bottom: 50px;
+
+            h2 {
+                color: var(--main-color);
+            }
+
+            p {
+                font-size: 17px;
+            }
+
+            .btn{
+                a{
+                    color: white;
+                    transition: var(--main-transition);
+                }
+
+                &:hover a{
+                    color: var(--main-color);
+                }
+            }
+        }
+
+        .img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            padding: 15px;
             background-color: white;
             position: relative;
-            bottom: 55px;
-            padding: 15px;
-        }
-    }
-}
-    // تحسين تنسيقات صفحة الملف الشخصي
-    .active-profile {
-            background: #f7fafd;
-            min-height: 100vh;
-            box-shadow: 0 2px 16px #e0e7ef;
-        .container {
-            max-width: 950px;
-            margin: auto;
-            padding: 0 15px;
-            border-radius: 18px;
-            background: #fff;
-            box-shadow: 0 2px 16px #e0e7ef;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        .cover-box {
-            position: relative;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 12px #d0e2ea;
+            overflow: hidden;
+
             img {
-                border-radius: 20px;
+                border-radius: 50%;
                 width: 100%;
-                max-height: 180px;
+                height: 100%;
                 object-fit: cover;
-            }
-            .logo {
-                position: absolute;
-                top: 30px;
-                left: 30px;
-                width: 120px;
+                position: relative;
                 z-index: 2;
             }
-        }
-        .profile-info {
-                h2 {
-                    color: var(--main-color);
-                    font-weight: bold;
-                    font-size: 2.2rem;
-                    margin-bottom: 0.5rem;
-                    letter-spacing: 1px;
-                }
-                h4 {
-                    font-size: 1.15rem;
-                    color: #555;
-                    margin-bottom: 0.5rem;
-                }
-                #profile-rating {
-                    color: #FFA500;
-                    font-size: 1.1rem;
-                    margin-bottom: 0.5rem;
-                    font-weight: bold;
-                }
-                #profile-desc {
-                    font-size: 1.08rem;
-                    color: #666;
-                    line-height: 1.7;
-                    margin-bottom: 10px;
-                }
-        }
-        .profile-img img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 6px solid #fff;
-            box-shadow: 0 4px 16px #b6c7d6;
-            background: #fff;
-        }
-        #book-session {
-                background: var(--main-color);
-                color: #fff;
-                border-radius: 8px;
-                font-size: 1.2rem;
-                font-weight: bold;
-                border: none;
-                margin-bottom: 20px;
-                box-shadow: 0 2px 8px #b6c7d6;
-                transition: background 0.3s, box-shadow 0.3s;
-                &:hover {
-                    background: #006d7a;
-                    box-shadow: 0 4px 16px #b6c7d6;
-                    transform: translateY(-2px) scale(1.03);
-                }
-        }
-        .video-box {
-                position: relative;
-                margin-bottom: 30px;
-                img {
-                    border-radius: 18px;
-                    width: 100%;
-                    max-height: 260px;
-                    object-fit: cover;
-                    box-shadow: 0 2px 12px #d0e2ea;
-                }
-                #watch-video {
-                    position: absolute;
-                    bottom: 20px;
-                    right: 20px;
-                    background: var(--main-color);
-                    color: #fff !important;
-                    border-radius: 8px;
-                    padding: 8px 18px;
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    box-shadow: 0 2px 8px #b6c7d6;
-                    transition: background 0.3s, box-shadow 0.3s;
-                    &:hover {
-                        background: #006d7a;
-                        box-shadow: 0 4px 16px #b6c7d6;
-                        transform: scale(1.05);
-                    }
-                    i {
-                        margin-left: 8px;
-                        font-size: 1.2rem;
-                    }
-                }
-        }
-        h3 {
-            color: var(--main-color);
-            font-weight: bold;
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-        .profile-data {
-                text-align: center;
-                font-size: 1.13rem;
-                color: #333;
-                margin-bottom: 40px;
-                line-height: 1.8;
-                img {
-                    width: 232px !important;
-                    height: 232px !important;
-                    border-radius: 116.23px !important;
-                    border-width: 7.68px !important;
-                    object-fit: cover;
-                    border: 6px solid #fff;
-                    box-shadow: 0 4px 16px #b6c7d6;
-                    background: #fff;
-                    margin-bottom: 18px;
-                }
+
+            .image-loaded {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--main-color);
+                animation: fadeIn 1s ease-in-out forwards;
+                z-index: 1;
+            }
         }
     }
 
-/* End Active Profile*/
+    .about-expert {
+        .img-about {
+            width: 850px;
+            height: 444px;
+            border-radius: 20px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h3{
+            color: var(--main-color);
+        }
+
+        p{
+            line-height: 1.8;
+            color: #777;
+            margin-bottom: 50px;
+        }
+
+
+    }
+}
+
+/* End Active Profile */
+/* Start Footer Section*/
+.footer {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 15px;
+
+            a {
+                color: white !important;
+                text-decoration: none !important;
+            }
+
+            .uls {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .img img {
+        width: 550px !important;
+        height: auto;
+    }
+}
+
+/* End Footer Section*/
