@@ -2,7 +2,7 @@
   "experts": [
     {
       "id": 1,
-      "name": "د. أميرة حسين",
+      "name": "كوتش. أميرة حسين",
       "title": "اخصائي أُسري, مؤسس أُسرة",
       "image": "../imges/cotsh-amira.jpg",
       "alt": "Cotsh Amira",
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "name": "د. مريم سمير",
+      "name": "كوتش. مريم سمير",
       "title": "اخصائي اجتماعي",
       "image": "../imges/cotash marim sameir.png",
       "alt": "Cotsh Mohanad",
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "name": "د. محمد حربي",
+      "name": "كوتش. محمد حربي",
       "title": "كوتش شباب, مؤسس قدرات",
       "image": "../imges/Dr Mohmed Harby.jpg",
       "alt": "Dr Mohmed Harby",
@@ -72,7 +72,7 @@
     },
     {
       "id": 5,
-      "name": "د. أمنية محمد",
+      "name": "كوتش. أمنية محمد",
       "title": "استشاري اسري",
       "image": "../imges/omnia Mohamed.png",
       "alt": "Omnia Mohamed",
