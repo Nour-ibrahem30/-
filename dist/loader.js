@@ -31,7 +31,7 @@
     document.body.style.opacity = '0.8';
     document.documentElement.style.overflow = 'hidden';
 
-    var DISPLAY_MS = 3000000; // 3000 seconds
+    var DISPLAY_MS = 3000; // 3000 ms
     var FADE_MS = 500; // fade-out duration should match CSS
 
     setTimeout(function () {
