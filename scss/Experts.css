@@ -512,7 +512,7 @@ header .navbar .join-us:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #ffffff;
+  background: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: center;
