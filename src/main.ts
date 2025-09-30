@@ -190,7 +190,7 @@ class ExpertSystem {
                 <span>${expert.experience}</span>
             </div>
             <button class="btn btn-primary book-session">احجز جلسة</button>
-            <button class="btn btn-primary"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
+            <button class="btn btn-hero-two"><a href="./portflio.html"> عرض الملف الشخصي</a></button>
         `;
 
         // Attach navigation for book session button
