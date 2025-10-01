@@ -93,6 +93,15 @@ button {
         }
     }
 
+        /* Ensure any navbar-toggler icon across the site is white (covers other pages) */
+        :root {
+            --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    
+        /* high-specificity fallback for pages that might override the variable */
+        .navbar .navbar-toggler .navbar-toggler-icon {
+            background-image: var(--bs-navbar-toggler-icon-bg) !important;
+        }
     .join-us {
         width: 177px;
         height: 45px;
@@ -623,3 +632,80 @@ button {
 }
 
 /* End Footer Section*/
+/* Responsive improvements */
+// Large desktops: default layout
+@media (max-width: 1199.98px) {
+    .hero .content p {
+        width: 380px;
+    }
+
+    .active-profile .about-expert .img-about {
+        width: 720px;
+        height: 380px;
+    }
+}
+
+// Tablets
+@media (max-width: 991.98px) {
+    .active-profile .profile-data .parent-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .active-profile .profile-data .img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .active-profile .about-expert .img-about {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero .content p {
+        width: 100%;
+    }
+}
+
+// Small tablets / large phones
+@media (max-width: 767.98px) {
+    .navbar img {
+        width: 180px;
+        height: auto;
+    }
+
+    .hero .content h1 {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .active-profile .profile-data .parent-content {
+        padding: 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+// Phones
+@media (max-width: 575.98px) {
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .active-profile .profile-data .img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .active-profile .profile-data .parent-content p {
+        font-size: 15px;
+    }
+
+    .hero .img {
+        width: 100%;
+    }
+}

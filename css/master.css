@@ -9,12 +9,123 @@ body {
   font-family: "Somar Rounded", sans-serif;
 }
 
+/* Page loader styles (overlay + logo + animation) */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  z-index: 99999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.page-loader__logo {
+  width: clamp(140px, 18vw, 200px);
+  height: auto;
+  animation: loader-bounce 1.2s cubic-bezier(.22, .9, .25, 1) infinite;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.28));
+  z-index: 100000;
+  /* ensure logo sits above decorative rings */
+}
+
+@keyframes loader-bounce {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+
+  40% {
+    transform: translateY(-14px) scale(1.06) rotate(-1deg);
+  }
+
+  70% {
+    transform: translateY(-6px) scale(1.03) rotate(0.5deg);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+.page-loader.is-hiding {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Decorative pulsing rings behind the logo */
+.page-loader::before,
+.page-loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  pointer-events: none;
+  z-index: 99998;
+  /* behind the logo but above background */
+}
+
+.page-loader::before {
+  width: clamp(220px, 28vw, 300px);
+  height: clamp(220px, 28vw, 300px);
+  border: 8px solid rgba(255, 255, 255, 0.12);
+  animation: ring-pulse 2.4s ease-out infinite;
+}
+
+.page-loader::after {
+  width: clamp(160px, 22vw, 220px);
+  height: clamp(160px, 22vw, 220px);
+  border: 4px solid rgba(255, 255, 255, 0.09);
+  animation: ring-pulse 2.4s ease-out 0.5s infinite;
+}
+
+@keyframes ring-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .page-loader__logo,
+  .page-loader::before,
+  .page-loader::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Lock scrolling when loader is active (class added to <html>) */
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
 /* Ensure images scale within their containers */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* Selection highlight uses main color and white text for readability */
 ::-moz-selection {
   background-color: var(--main-color);
   color: white;
@@ -28,28 +139,31 @@ img {
 .main-head h1 {
   color: var(--main-color);
 }
-
 button {
   width: 208px;
   height: 56px;
   margin-left: 15px;
 }
+
 button.btn-hero-one {
   border: 2px solid var(--main-color);
   background-color: var(--main-color);
   color: white;
   transition: var(--main-transition);
 }
+
 button.btn-hero-one:hover {
   background-color: transparent;
   color: var(--main-color);
   border: 2px solid var(--main-color);
 }
+
 button.btn-hero-two {
   border: 2px solid var(--main-color);
   color: var(--main-color);
   transition: var(--main-transition);
 }
+
 button.btn-hero-two:hover {
   background-color: var(--main-color);
   color: white;
@@ -87,6 +201,13 @@ button.btn-hero-two:hover {
 }
 .navbar .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+:root {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg) !important;
 }
 .navbar .join-us {
   width: 177px;
@@ -127,6 +248,80 @@ button.btn-hero-two:hover {
   cursor: pointer;
   animation: float-up-down 6s ease infinite;
   transition: var(--main-transition);
+}
+/* Responsive improvements */
+@media (max-width: 1199.98px) {
+  .hero .content p {
+    width: 380px;
+  }
+
+  .active-profile .about-expert .img-about {
+    width: 720px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .active-profile .profile-data .parent-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .active-profile .profile-data .img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .active-profile .about-expert .img-about {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero .content p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar img {
+    width: 180px;
+    height: auto;
+  }
+
+  .hero .content h1 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .active-profile .profile-data .parent-content {
+    padding: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .active-profile .profile-data .img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .active-profile .profile-data .parent-content p {
+    font-size: 15px;
+  }
+
+  .hero .img {
+    width: 100%;
+  }
 }
 @keyframes float-up-down {
   0% {

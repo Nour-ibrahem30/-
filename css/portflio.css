@@ -193,3 +193,51 @@ button.btn-hero-two:hover {
 }
 
 /* End Footer Section*//*# sourceMappingURL=portflio.css.map */
+/* Responsive: portfolio / profile improvements */
+@media (max-width: 991.98px) {
+  .active-profile .profile-data .parent-content {
+    display: flex;
+    /* keep the button inline with the image on narrower screens */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .active-profile .profile-data .img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .active-profile .about-expert .img-about {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .active-profile .profile-data .img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .active-profile .profile-data .parent-content p {
+    font-size: 14px;
+  }
+
+  /* Hide the large cover image (Porfile Coach Cover) on small screens */
+  img[src*="Porfile Coach Cover"] {
+    display: none !important;
+  }
+
+  .active-profile .profile-data .parent-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  .active-profile .profile-data .parent-content .btn {
+    margin-top: 0 !important;
+  }
+}

@@ -376,7 +376,7 @@ header {
     }
 
     .info .content .img img {
-        max-width: 320px;
+        max-width: 260px;
         margin-inline: auto;
     }
 }
@@ -413,7 +413,8 @@ header {
     }
 
     .hero .img {
-        max-width: 320px;
+        max-width: 260px;
+            margin-inline: auto;
     }
 
     .footer .img img {
@@ -427,12 +428,15 @@ header {
     }
 
     .content-header img {
-        max-width: 280px;
+        max-width: 220px;
     }
 
     .who-are .content .text p,
-    .info p {
+                                                                .info p,
+                                                                .info .content p {
         font-size: 18px;
+        /* make paragraphs take automatic width on very small screens */
+            width: auto !important;
     }
 
     .main-head img {

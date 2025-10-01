@@ -19,20 +19,20 @@
         return overlay;
     }
     function showLoader() {
+        if (document.querySelector('.page-loader'))
+            return;
         const base = getBasePath();
         const logoSrc = `${base}/imges/Logo-Footer.png`;
         const overlay = createLoader(logoSrc);
         document.body.appendChild(overlay);
-        document.body.style.opacity = '0.8';
-        document.documentElement.style.overflow = 'hidden';
+        document.documentElement.classList.add('no-scroll');
         const DISPLAY_MS = 3000;
         const FADE_MS = 500;
         setTimeout(() => {
             overlay.classList.add('is-hiding');
-            document.body.style.opacity = '1';
             setTimeout(() => {
                 overlay.remove();
-                document.documentElement.style.overflow = '';
+                document.documentElement.classList.remove('no-scroll');
             }, FADE_MS);
         }, DISPLAY_MS);
     }
@@ -42,5 +42,8 @@
     else {
         showLoader();
     }
+    window.addEventListener('pageshow', () => {
+        showLoader();
+    });
 })();
 //# sourceMappingURL=loader.js.map

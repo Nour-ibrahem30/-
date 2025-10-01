@@ -226,3 +226,22 @@ button {
 }
 
 /* End Footer Section*/
+@media (max-width: 575.98px) {
+
+    /* Hide the profile cover image on very small screens to avoid layout issues */
+    img[src*="Porfile Coach Cover"] {
+        display: none !important;
+    }
+
+    /* Ensure the button stays vertically centered next to the image */
+    .active-profile .profile-data .parent-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    .active-profile .profile-data .parent-content .btn {
+        margin-top: 0 !important;
+    }
+}
