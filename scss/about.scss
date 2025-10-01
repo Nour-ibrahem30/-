@@ -164,6 +164,7 @@ header {
             }
     }
     .content {
+    display: flex;
     border-radius: 24px;
     padding: 24px 28px;
     gap: 24px;
@@ -309,7 +310,14 @@ header {
         flex-direction: column-reverse;
         text-align: center;
     }
-
+    .info .content{
+        &.content-one {
+            flex-direction: column;
+        }
+        &.content-three{
+            flex-direction: column;
+        }
+    }
     .hero .content {
         align-items: center;
     }

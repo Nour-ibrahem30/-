@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Start Global */
 :root {
   --main-color: #008695;
@@ -114,25 +115,51 @@ header .navbar .join-us:hover {
 }
 
 /* End Header*/
-/* Start Content*/
+/* Start Content */
 .content .img-qoute {
   background-color: var(--main-color);
   padding: 15px;
   border-radius: 16px;
+  text-align: center;
+}
+.content .img-qoute img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.content .podcast-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 .content .podcast-img .img {
-  width: 628px;
-  height: 349px;
+  flex: 1 1 calc(50% - 1.5rem);
+  max-width: calc(50% - 1.5rem);
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 10px;
 }
 .content .podcast-img .img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: inherit;
+  transition: transform 0.3s ease-in-out;
+}
+.content .podcast-img .img:hover img {
+  transform: scale(1.05);
 }
 
-/* End Content*/
+/* 📱 موبايل: كل صورة لوحدها */
+@media (max-width: 768px) {
+  .content .podcast-img .img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+/* End Content */
 /* Start Article */
 article .article-text .card {
   width: 406px !important;

@@ -139,6 +139,7 @@ header .navbar .join-us:hover {
   width: 627px;
 }
 .info .content {
+  display: flex;
   border-radius: 24px;
   padding: 24px 28px;
   gap: 24px;
@@ -264,6 +265,12 @@ header .navbar .join-us:hover {
     flex-direction: column-reverse;
     text-align: center;
   }
+  .info .content.content-one {
+    flex-direction: column;
+  }
+  .info .content.content-three {
+    flex-direction: column;
+  }
   .hero .content {
     align-items: center;
   }
@@ -316,7 +323,7 @@ header .navbar .join-us:hover {
     max-width: 380px;
   }
   .info .content .img img {
-    max-width: 320px;
+    max-width: 260px;
     margin-inline: auto;
   }
 }
@@ -347,7 +354,7 @@ header .navbar .join-us:hover {
   }
   .hero .img {
     max-width: 260px;
-      margin-inline: auto;
+    margin-inline: auto;
   }
   .footer .img img {
     width: 160px;
@@ -360,21 +367,15 @@ header .navbar .join-us:hover {
   .content-header img {
     max-width: 220px;
   }
-    .info .content .img img {
-      max-width: 260px;
-      margin-inline: auto;
-    }
   .who-are .content .text p,
-  .info p {
+  .info p,
+  .info .content p {
     font-size: 18px;
+    /* make paragraphs take automatic width on very small screens */
+    width: auto !important;
   }
   .main-head img {
     max-width: 140px;
   }
-                                /* Make paragraph widths auto on very small screens for readability */
-                                .info .content p,
-                                .who-are .content .text p {
-                                  width: auto !important;
-                                }
 }
 /* End Footer Section*//*# sourceMappingURL=about.css.map */
