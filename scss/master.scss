@@ -188,7 +188,7 @@ button {
             width: clamp(90px, 12vw, 150px);
             height: auto;
             opacity: 0;
-            animation: moveInLeft 6s ease-out infinite;
+            animation: fadeInLeft 6s ease-out forwards;
             transition: var(--main-transition);
 
             &:hover {
@@ -223,32 +223,24 @@ button {
     }
 }
 
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-
-    15% {
-        opacity: 1;
-        transform: translateX(-15px);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateX(40px);
-    }
-
-    85% {
-        opacity: 1;
-        transform: translateX(10px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px); /* تبدأ من بعيد */
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(15px);  /* تتخطى مكانها شوية */
+  }
+  80% {
+    transform: translateX(-8px);  /* حركة راجعة خفيفة */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);     /* تثبت في مكانها الطبيعي */
+  }
 }
+
 
 // Alternative smoother animation for small screens
 @keyframes slideUpPulse {

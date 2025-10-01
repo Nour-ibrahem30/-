@@ -165,7 +165,7 @@ button.btn-hero-two:hover {
   width: clamp(90px, 12vw, 150px);
   height: auto;
   opacity: 0;
-  animation: moveInLeft 6s ease-out infinite;
+  animation: fadeInLeft 6s ease-out forwards;
   transition: var(--main-transition);
 }
 .content .img-content .img:hover img {
@@ -212,26 +212,21 @@ button.btn-hero-two:hover {
     animation: slideUpPulse 5.5s ease-in-out infinite;
   }
 }
-@keyframes moveInLeft {
+@keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateX(-60px); /* تبدأ من بعيد */
   }
-  15% {
+  60% {
     opacity: 1;
-    transform: translateX(-15px);
+    transform: translateX(15px); /* تتخطى مكانها شوية */
   }
-  50% {
-    opacity: 1;
-    transform: translateX(40px);
-  }
-  85% {
-    opacity: 1;
-    transform: translateX(10px);
+  80% {
+    transform: translateX(-8px); /* حركة راجعة خفيفة */
   }
   100% {
-    opacity: 0;
-    transform: translateX(-40px);
+    opacity: 1;
+    transform: translateX(0); /* تثبت في مكانها الطبيعي */
   }
 }
 @keyframes slideUpPulse {
