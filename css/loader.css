@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+:root {
+    --main-color: #008695
+}
+
+/* Loader overlay + logo + decorative rings */
+.page-loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    z-index: 99999;
+    transition: opacity .5s ease, visibility .5s ease;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    overflow: hidden
+}
+
+.page-loader__logo {
+    width: clamp(140px, 18vw, 200px);
+    height: auto;
+    animation: loader-bounce 1.2s cubic-bezier(.22, .9, .25, 1) infinite;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, .28));
+    z-index: 100000
+}
+
+@keyframes loader-bounce {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg)
+    }
+
+    40% {
+        transform: translateY(-14px) scale(1.06) rotate(-1deg)
+    }
+
+    70% {
+        transform: translateY(-6px) scale(1.03) rotate(.5deg)
+    }
+
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg)
+    }
+}
+
+.page-loader.is-hiding {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+.page-loader::before,
+.page-loader::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    pointer-events: none;
+    z-index: 99998
+}
+
+.page-loader::before {
+    width: clamp(220px, 28vw, 300px);
+    height: clamp(220px, 28vw, 300px);
+    border: 8px solid rgba(255, 255, 255, .12);
+    animation: ring-pulse 2.4s ease-out infinite
+}
+
+.page-loader::after {
+    width: clamp(160px, 22vw, 220px);
+    height: clamp(160px, 22vw, 220px);
+    border: 4px solid rgba(255, 255, 255, .09);
+    animation: ring-pulse 2.4s ease-out .5s infinite
+}
+
+@keyframes ring-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(.8);
+        opacity: .6
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+/* Lock scrolling when loader is active (class added to <html>) */
+html.no-scroll,
+body.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion:reduce) {
+
+    .page-loader__logo,
+    .page-loader::before,
+    .page-loader::after {
+        animation: none !important;
+        transition: none !important
+    }
+}
