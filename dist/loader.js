@@ -45,5 +45,35 @@
     window.addEventListener('pageshow', () => {
         showLoader();
     });
+    function createBackToTopButton() {
+        const button = document.createElement('button');
+        button.className = 'back-to-top';
+        button.type = 'button';
+        button.setAttribute('aria-label', 'العودة للأعلى');
+        button.innerHTML = '<span aria-hidden="true">▲</span>';
+        button.addEventListener('click', () => {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+        });
+        return button;
+    }
+    function initBackToTop() {
+        if (document.querySelector('.back-to-top'))
+            return;
+        const btn = createBackToTopButton();
+        document.body.appendChild(btn);
+        const toggleVisibility = () => {
+            const shouldShow = window.scrollY > 300;
+            btn.classList.toggle('is-visible', shouldShow);
+        };
+        toggleVisibility();
+        window.addEventListener('scroll', toggleVisibility, { passive: true });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initBackToTop);
+    }
+    else {
+        initBackToTop();
+    }
 })();
 //# sourceMappingURL=loader.js.map

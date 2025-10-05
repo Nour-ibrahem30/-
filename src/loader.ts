@@ -58,4 +58,39 @@
         // pageshow fires on load and when returning from bfcache; ensure loader runs
         showLoader();
     });
+
+	// Back-to-Top Button (global across all pages)
+	function createBackToTopButton(): HTMLButtonElement {
+		const button = document.createElement('button');
+		button.className = 'back-to-top';
+		button.type = 'button';
+		button.setAttribute('aria-label', 'العودة للأعلى');
+		button.innerHTML = '<span aria-hidden="true">▲</span>';
+		button.addEventListener('click', () => {
+			const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+		});
+		return button;
+	}
+
+	function initBackToTop(): void {
+		if (document.querySelector('.back-to-top')) return;
+		const btn = createBackToTopButton();
+		document.body.appendChild(btn);
+
+		const toggleVisibility = () => {
+			const shouldShow = window.scrollY > 300;
+			btn.classList.toggle('is-visible', shouldShow);
+		};
+
+		// Initial state and listeners
+		toggleVisibility();
+		window.addEventListener('scroll', toggleVisibility, { passive: true });
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initBackToTop);
+	} else {
+		initBackToTop();
+	}
 })();
